@@ -8,6 +8,7 @@ export const AIAssistant: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [showHint, setShowHint] = useState(true);
   const location = useLocation();
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -28,6 +29,11 @@ export const AIAssistant: React.FC = () => {
     return undefined;
   };
 
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) setShowHint(false);
+  };
+
   const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!input.trim() || isLoading) return;
@@ -46,7 +52,6 @@ export const AIAssistant: React.FC = () => {
     setIsLoading(false);
   };
 
-  // Helper for "Explain this" contextual prompt
   const handlePromptClick = (prompt: string) => {
     const newHistory: ChatMessage[] = [...messages, { role: 'user', text: prompt }];
     setMessages(newHistory);
@@ -131,7 +136,7 @@ export const AIAssistant: React.FC = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask a question..."
-            className="flex-1 text-sm border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-primary"
+            className="flex-1 text-sm bg-white border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-primary"
           />
           <button 
             type="submit" 
@@ -145,16 +150,36 @@ export const AIAssistant: React.FC = () => {
         </form>
       </div>
 
-      {/* Floating Toggle Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`pointer-events-auto bg-primary hover:bg-teal-800 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center ${isOpen ? 'rotate-90 opacity-0 hidden' : 'rotate-0 opacity-100'}`}
-        aria-label="Open AI Tutor"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-        </svg>
-      </button>
+      {/* Button and Signage Row */}
+      <div className="flex items-center gap-3 pointer-events-auto">
+        {!isOpen && showHint && (
+          <div className="bg-white text-gray-800 text-sm px-4 py-2 rounded-xl shadow-lg border border-teal-100 flex items-center gap-3 animate-bounce">
+            <span className="font-medium text-primary whitespace-nowrap">Click to ask a question or be quizzed...</span>
+            <button 
+              onClick={(e) => { e.stopPropagation(); setShowHint(false); }} 
+              className="text-gray-400 hover:text-gray-600"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+          </div>
+        )}
+
+        <button
+          onClick={toggleOpen}
+          className={`bg-primary hover:bg-teal-800 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center ${isOpen ? 'rotate-90' : 'rotate-0'}`}
+          aria-label="Open AI Tutor"
+        >
+          {isOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+          )}
+        </button>
+      </div>
     </div>
   );
 };
