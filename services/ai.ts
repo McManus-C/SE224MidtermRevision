@@ -52,23 +52,13 @@ export const askAI = async (
       ${contextText ? `CONTEXT TO USE:\n${contextText}` : ''}
     `;
 
-    // Construct the full prompt from history for a stateless single-turn call, 
-    // or use generateContent with the history embedded.
-    // Since generateContent is stateless, we will concatenate the history into a prompt string 
-    // or use the chat model if we were maintaining a session object. 
-    // For simplicity in this architecture where we pass history array:
-    
+    // Construct the full prompt from history for the single-turn call.
     let fullPrompt = "";
     
     // Append history
     history.forEach(msg => {
       fullPrompt += `${msg.role === 'user' ? 'Student' : 'Tutor'}: ${msg.text}\n`;
     });
-    
-    // The last message is already in history, but for the API call we need to ensure the model knows it's the latest input.
-    // Actually, with the system instruction, we can just send the history as the "contents" if we format it right, 
-    // or just send the last message and rely on the model seeing the previous turns if we were using a chat session.
-    // BUT here we are using `generateContent` which is single turn. We must feed the whole conversation.
     
     const response = await aiClient.models.generateContent({
       model: 'gemini-2.5-flash',
