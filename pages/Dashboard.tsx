@@ -33,7 +33,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ state }) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-24">
-      {/* Header Title */}
+      {/* Header */}
       <div className="md:flex md:items-center md:justify-between mb-8">
         <div>
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight">SE224 Applied Sports Nutrition Revision Guide</h1>
@@ -46,65 +46,54 @@ export const Dashboard: React.FC<DashboardProps> = ({ state }) => {
         </div>
       </div>
 
-      {/* HOW TO USE GUIDE - Explicitly Added Here */}
-      <section className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-10">
-        <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-          <span className="bg-teal-100 text-teal-800 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mr-2">Start Here</span>
-          How to use this guide
+      {/* Intro / How-to Guide */}
+      <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 mb-8">
+        <h2 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
+           <span className="bg-teal-100 text-teal-800 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide mr-2">Start Here</span>
+           How to use this revision guide
         </h2>
-        
-        <div className="grid gap-6 md:grid-cols-4">
-          {/* Step 1 */}
-          <Link to="/foundations" className="group relative rounded-lg border border-teal-100 bg-teal-50/50 p-5 hover:bg-teal-50 hover:shadow-md transition-all">
-            <div className="absolute top-4 right-4 text-teal-200 group-hover:text-teal-300">
-              <span className="text-4xl font-black opacity-20">1</span>
-            </div>
-            <div className="mb-3 h-10 w-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-700">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          
+          <Link to="/foundations" className="flex flex-col items-start p-4 rounded-lg bg-gray-50 border border-gray-100 hover:bg-gray-100 hover:shadow-sm transition-all group">
+            <div className="bg-teal-100 text-teal-700 p-2 rounded-lg mb-3 group-hover:bg-teal-200 transition-colors">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
             </div>
-            <h3 className="font-bold text-gray-900 group-hover:text-primary">Foundations</h3>
-            <p className="mt-1 text-sm text-gray-600">Start by mastering the key terms and concepts.</p>
+            <h3 className="font-bold text-gray-900 text-sm group-hover:text-primary">1. Foundations</h3>
+            <p className="text-xs text-gray-600 mt-1 mb-3">Master the key terms and building blocks.</p>
+            <span className="text-xs font-bold text-primary mt-auto">Go to Foundations &rarr;</span>
           </Link>
 
-          {/* Step 2 */}
-          <Link to="/topics" className="group relative rounded-lg border border-blue-100 bg-blue-50/50 p-5 hover:bg-blue-50 hover:shadow-md transition-all">
-            <div className="absolute top-4 right-4 text-blue-200 group-hover:text-blue-300">
-              <span className="text-4xl font-black opacity-20">2</span>
+          <Link to="/topics" className="flex flex-col items-start p-4 rounded-lg bg-gray-50 border border-gray-100 hover:bg-gray-100 hover:shadow-sm transition-all group">
+            <div className="bg-blue-100 text-blue-700 p-2 rounded-lg mb-3 group-hover:bg-blue-200 transition-colors">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
             </div>
-            <div className="mb-3 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-            </div>
-            <h3 className="font-bold text-gray-900 group-hover:text-blue-700">Topics & Notes</h3>
-            <p className="mt-1 text-sm text-gray-600">Read summaries and detailed study notes.</p>
+            <h3 className="font-bold text-gray-900 text-sm group-hover:text-blue-700">2. Topic Mastery</h3>
+            <p className="text-xs text-gray-600 mt-1 mb-3">Read summaries and full detailed notes.</p>
+            <span className="text-xs font-bold text-primary mt-auto">View Topics &rarr;</span>
           </Link>
 
-          {/* Step 3 */}
-          <div className="group relative rounded-lg border border-amber-100 bg-amber-50/50 p-5 cursor-default">
-            <div className="absolute top-4 right-4 text-amber-200">
-              <span className="text-4xl font-black opacity-20">3</span>
-            </div>
-            <div className="mb-3 h-10 w-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700">
+          <div className="flex flex-col items-start p-4 rounded-lg bg-gray-50 border border-gray-100 cursor-default">
+            <div className="bg-amber-100 text-amber-700 p-2 rounded-lg mb-3">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
             </div>
-            <h3 className="font-bold text-gray-900">AI Tutor</h3>
-            <p className="mt-1 text-sm text-gray-600">Click the button in the bottom right ↘️ to ask questions anytime.</p>
+            <h3 className="font-bold text-gray-900 text-sm">3. AI Tutor</h3>
+            <p className="text-xs text-gray-600 mt-1">Stuck? Use the button in the bottom right to ask questions.</p>
+            <span className="text-xs text-gray-400 mt-auto pt-2">Available anytime ↘️</span>
           </div>
 
-          {/* Step 4 */}
-          <Link to="/exam" className="group relative rounded-lg border border-purple-100 bg-purple-50/50 p-5 hover:bg-purple-50 hover:shadow-md transition-all">
-            <div className="absolute top-4 right-4 text-purple-200 group-hover:text-purple-300">
-              <span className="text-4xl font-black opacity-20">4</span>
+          <Link to="/exam" className="flex flex-col items-start p-4 rounded-lg bg-gray-50 border border-gray-100 hover:bg-gray-100 hover:shadow-sm transition-all group">
+            <div className="bg-green-100 text-green-700 p-2 rounded-lg mb-3 group-hover:bg-green-200 transition-colors">
+               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             </div>
-            <div className="mb-3 h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-700">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <h3 className="font-bold text-gray-900 group-hover:text-purple-700">Exam Mode</h3>
-            <p className="mt-1 text-sm text-gray-600">Test yourself with mixed questions when you're ready.</p>
+            <h3 className="font-bold text-gray-900 text-sm group-hover:text-green-700">4. Test Yourself</h3>
+            <p className="text-xs text-gray-600 mt-1 mb-3">Try the Exam Mode to simulate real questions.</p>
+            <span className="text-xs font-bold text-primary mt-auto">Start Exam &rarr;</span>
           </Link>
-        </div>
-      </section>
 
-      {/* Progress / Stats Row */}
+        </div>
+      </div>
+
+      {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div className="bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow rounded-xl p-5 border border-gray-100">
           <dt className="text-sm font-medium text-gray-500 truncate">Questions Due Review</dt>
@@ -137,16 +126,22 @@ export const Dashboard: React.FC<DashboardProps> = ({ state }) => {
         </div>
       </div>
 
-      {/* Foundations Banner - Fixed Clickability */}
-      <div className="bg-gradient-to-br from-teal-700 to-teal-900 rounded-xl shadow-lg overflow-hidden mb-8 text-white relative">
-        <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white opacity-10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="px-6 py-8 sm:px-8 flex flex-col md:flex-row items-center justify-between relative z-10">
+      {/* Foundations Banner - Redesigned for clickability */}
+      <div className="relative isolate bg-gradient-to-br from-teal-700 to-teal-900 rounded-xl shadow-lg mb-8 text-white overflow-hidden">
+        {/* Background Blob - strictly behind */}
+        <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white opacity-10 rounded-full blur-3xl pointer-events-none z-0"></div>
+        
+        {/* Content Wrapper - strictly above */}
+        <div className="relative z-10 px-6 py-8 sm:px-8 flex flex-col md:flex-row items-center justify-between">
           <div className="md:pr-8">
              <h2 className="text-2xl font-bold">Start with the Foundations</h2>
              <p className="mt-2 text-teal-100 text-sm sm:text-base">Master key terms like <strong>Glycogen</strong>, <strong>AMPK</strong>, and <strong>Oxidative Phosphorylation</strong>. Understanding these building blocks makes the complex topics much easier.</p>
           </div>
           <div className="mt-6 md:mt-0 flex-shrink-0">
-             <Link to="/foundations" className="inline-block bg-white text-teal-900 font-bold py-3 px-6 rounded-lg hover:bg-teal-50 transition-colors shadow-md relative z-20 pointer-events-auto">
+             <Link 
+               to="/foundations" 
+               className="relative z-20 inline-flex items-center justify-center bg-white text-teal-900 font-bold py-3 px-6 rounded-lg hover:bg-teal-50 transition-colors shadow-md"
+             >
                Open Key Terms &rarr;
              </Link>
           </div>

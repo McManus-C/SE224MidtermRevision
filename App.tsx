@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Dashboard } from './pages/Dashboard';
 import { TopicDetail } from './pages/TopicDetail';
@@ -80,10 +80,10 @@ const TopicList: React.FC = () => {
             </div>
             <div className="bg-gray-50 px-5 py-3 border-t border-gray-100 mt-auto flex justify-between items-center">
                <span className="text-xs text-gray-500 font-medium">{topic.learningObjectives.length} Objectives</span>
-               <a href={`#/topics/${topic.id}`} className="text-primary hover:text-teal-800 font-bold text-sm flex items-center">
+               <Link to={`/topics/${topic.id}`} className="text-primary hover:text-teal-800 font-bold text-sm flex items-center">
                   Study 
                   <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-               </a>
+               </Link>
             </div>
           </div>
         ))}
