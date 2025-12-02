@@ -560,47 +560,97 @@ export const TOPICS: Topic[] = [
   {
     id: 'dietary-strategies',
     title: 'Dietary Strategies & Performance',
-    description: 'High-fat diets, Ketogenic diets, and the truth about fuel utilization.',
+    description: 'How different dietary strategies (high carbohydrate, low carbohydrate, ketogenic, and pre-exercise fuelling) alter substrate utilisation, physiology, and performance in different sports.',
     learningObjectives: [
-      'Evaluate Ketogenic diets for high-intensity performance.',
-      'Debunk the "Fat Burning Zone" switch misconception.',
-      'Explain how high-carb diets influence fat oxidation.'
+      'Describe the main energy systems (ATP-PCr, glycolytic, oxidative) and their preferred substrates during different types of exercise.',
+      'Explain how high carbohydrate diets and carbohydrate loading increase muscle and liver glycogen, and how this influences endurance and high-intensity performance.',
+      'Discuss the metabolic and hormonal adaptations to low carbohydrate and ketogenic diets, including increased fat oxidation, ketosis, and the typical adaptation period.',
+      'Evaluate how pre-exercise carbohydrate intake affects substrate availability and utilisation during exercise, and the implications for performance.',
+      'Apply dietary strategies in an individualised way, considering hormones, cellular signalling, oxidative stress, inflammation, sport-specific demands, and athlete characteristics (including sex and training status).'
     ],
     keyPoints: [
-      'Fat and carbs are oxidized simultaneously (continuum), not sequentially.',
-      'High-Fat Low-Carb (HFLC) diets impair exercise economy.',
-      'HFLC downregulates PDH, impairing sprint performance.',
-      'Insulin suppresses lipolysis (fat breakdown).'
+      'Substrate utilisation reflects a continuum: ATP-PCr, glycolytic, and oxidative systems all contribute, with relative use of carbohydrate and fat determined largely by exercise intensity and duration.',
+      'High carbohydrate diets and carbohydrate loading protocols increase muscle and liver glycogen stores, improving capacity for prolonged high-intensity efforts and repeated sprints.',
+      'Low carbohydrate and ketogenic diets markedly increase fat oxidation but downregulate key carbohydrate-oxidising enzymes (such as PDH), often impairing exercise economy and high-intensity performance despite high fat use.',
+      'Pre-exercise carbohydrate intake increases blood glucose and insulin, supports high-intensity performance, but acutely suppresses fat oxidation by inhibiting lipolysis.',
+      'Optimal dietary strategy is sport- and athlete-specific, influenced by hormonal responses, training phase, sex, gastrointestinal tolerance, and the relative importance of sustained high intensity versus maximal fat oxidation.'
     ],
     quickSummary: [
-      '<strong>Fuel Mixing:</strong> There is no "switch" where you stop burning carbs and start burning fat. Both are used simultaneously. Intensity determines the ratio.',
-      '<strong>High Fat Diets (LCHF):</strong> Drastically increase fat oxidation rates (up to 1.5g/min). <em>However</em>, they reduce the ability to use carbohydrates.',
-      '<strong>The Mechanism:</strong> LCHF diets reduce the activity of <em>PDH</em>. This makes the "glycolytic pathway" rusty.',
-      '<strong>Performance Cost:</strong> Fat requires more oxygen to produce energy than carbs. Therefore, LCHF reduces "Economy" (you work harder for the same speed).',
-      '<strong>Ketogenic Diets:</strong> Generally shown to impair high-intensity performance (race pace) even if fat burning is high.'
+      '<strong>Energy systems & substrates:</strong> All three energy systems (ATP-PCr, glycolytic, oxidative) operate together. The ATP-PCr system and glycolysis rely primarily on carbohydrate (phosphocreatine and muscle glycogen), while oxidative metabolism uses both carbohydrate and fat. Intensity, duration, and training status determine the relative mix.',
+      '<strong>High carbohydrate diets:</strong> High carbohydrate intake, especially when periodised around training, increases muscle and liver glycogen and supports high-intensity and prolonged endurance performance. Carbohydrate loading before long events further increases glycogen stores and delays fatigue.',
+      '<strong>Low carbohydrate & ketogenic diets:</strong> LCHF and ketogenic diets substantially increase fat oxidation and can induce nutritional ketosis (elevated blood ketones), but often reduce PDH activity and exercise economy at race pace. This usually impairs high-intensity performance despite excellent fat use.',
+      '<strong>Pre-exercise carbohydrate:</strong> Carbohydrate before exercise elevates blood glucose and insulin, prioritising carbohydrate use during the early part of exercise. This can benefit high-intensity or key sessions but will reduce fat oxidation compared with fasted or low-glycogen conditions.',
+      '<strong>Applied practice:</strong> Dietary strategies should be matched to the event (duration, intensity), the athlete (metabolic profile, GI tolerance, sex), and the training phase. There is no universal “best” diet, only strategies that are more or less appropriate for a given context.'
     ],
     fullNotes: `
-      <h3>Fuel Utilization Myths</h3>
-      <p>Commonly, people think "low intensity = fat burning" and "high intensity = carb burning" as separate zones. In reality, it is a <strong>continuum</strong>.</p>
+      <h3>1. Substrate Utilisation and Energy Systems</h3>
+      <p>During exercise, ATP is resynthesised by three overlapping energy systems, each with preferred substrates:</p>
       <ul>
-        <li>At rest: Mostly fat.</li>
-        <li>Moderate exercise: Mix of fat and carbs.</li>
-        <li>Maximal exercise: Almost entirely carbohydrate.</li>
+        <li><strong>ATP-PCr system:</strong> Dominant for very short, explosive efforts (~0–10 seconds). Uses stored ATP and phosphocreatine (PCr) within the muscle. Substrate is phosphagen, not carbohydrate or fat per se.</li>
+        <li><strong>Glycolytic system:</strong> Dominant during high-intensity efforts lasting roughly 30 seconds to a few minutes. Uses <strong>muscle glycogen</strong> and blood glucose to generate ATP rapidly, producing lactate and H+ when flux is high.</li>
+        <li><strong>Oxidative system (aerobic):</strong> Uses both <strong>carbohydrate (glucose/glycogen)</strong> and <strong>fat (plasma FFA, intramuscular triglyceride)</strong> to produce ATP in mitochondria. Dominant at rest and during prolonged, lower intensity exercise.</li>
+      </ul>
+      <p>There is no absolute “switch” from carbohydrate to fat. Instead, as intensity increases, the proportion of ATP derived from carbohydrate rises and the contribution from fat falls, even though both substrates are usually being used simultaneously.</p>
+
+      <h3>2. High Carbohydrate Diets and Carbohydrate Loading</h3>
+      <p><strong>High carbohydrate diets</strong> supply the main fuel for high-intensity and long-duration exercise:</p>
+      <ul>
+        <li><strong>Glycogen storage:</strong> High carbohydrate intake (for example 6–10 g/kg/day in endurance athletes) increases muscle and liver glycogen stores, which are key determinants of endurance performance.</li>
+        <li><strong>Carbohydrate loading:</strong> In the 24–48 hours before long events (typically >90 minutes), increasing intake to ~8–12 g/kg/day can super-compensate glycogen stores, delaying fatigue and improving time-trial performance.</li>
+        <li><strong>Nutrient timing:</strong> Concentrating carbohydrate intake in the 24–36 hours before competition is more efficient than spreading very high intakes over many days. Post-exercise carbohydrate (1.0–1.2 g/kg/h in early recovery) accelerates glycogen resynthesis between sessions.</li>
+        <li><strong>Hormonal responses:</strong> High carbohydrate availability stimulates insulin secretion, which promotes glucose uptake into muscle (via GLUT4), glycogen synthase activation, and glycogen storage. Over time, regular training plus appropriate carbohydrate intake can enhance insulin sensitivity.</li>
+      </ul>
+      <div class="bg-blue-50 p-4 rounded-md border border-blue-200 my-4">
+        <strong>Applied example:</strong> A marathon runner tapering training in race week may raise carbohydrate intake to ~8–10 g/kg/day in the final 36–48 hours to maximise muscle and liver glycogen, while moderating fibre and fat to reduce GI load.
+      </div>
+
+      <h3>3. Low Carbohydrate and Ketogenic Diets</h3>
+      <p><strong>Low-carbohydrate high-fat (LCHF)</strong> and <strong>ketogenic</strong> diets substantially change substrate use and hormonal environment:</p>
+      <ul>
+        <li><strong>Substrate shifts:</strong> With carbohydrate intake markedly reduced (for example <50 g/day in strict ketogenic diets), liver glycogen falls, insulin levels are low, glucagon and catecholamines rise, and fat oxidation rates increase markedly.</li>
+        <li><strong>Ketosis:</strong> In ketogenic diets, the liver produces ketone bodies (β-hydroxybutyrate, acetoacetate). Blood ketone concentrations are often maintained above ~0.5–1.0 mmol/L as a practical threshold for “nutritional ketosis”.</li>
+        <li><strong>Enzyme adaptations:</strong> LCHF and ketogenic diets upregulate enzymes for fat oxidation but downregulate carbohydrate-oxidising enzymes such as <em>Pyruvate Dehydrogenase (PDH)</em>. This impairs the ability to use carbohydrate rapidly at high intensities.</li>
+        <li><strong>Exercise economy:</strong> Oxidising fat requires more oxygen per unit of ATP than carbohydrate. As a result, at a given running or cycling speed, oxygen cost increases and exercise economy worsens in many athletes on LCHF diets, particularly at race pace.</li>
+        <li><strong>Adaptation period:</strong> The initial 1–2 weeks of a ketogenic diet are often associated with fatigue, reduced high-intensity capacity, and sometimes GI or cognitive symptoms. Some adaptations (for example maximal fat oxidation) may continue to develop over several weeks.</li>
+        <li><strong>Biomarker monitoring:</strong> In research and high-performance settings, blood or breath ketone measurements are used to confirm adherence and to quantify the degree of ketosis, rather than relying on diet records alone.</li>
+      </ul>
+      <p><strong>Performance implications:</strong> While LCHF and ketogenic diets can markedly increase fat oxidation, many studies show no improvement or even impaired performance in events requiring sustained high intensity, especially once athletes are well trained. They may have niche applications (for example some ultra-endurance scenarios) but are rarely optimal for sports demanding repeated high-intensity efforts.</p>
+
+      <h3>4. Pre-Exercise Carbohydrate Intake</h3>
+      <p>Pre-exercise carbohydrate intake influences which substrates are used, particularly in the early part of exercise:</p>
+      <ul>
+        <li><strong>Substrate availability:</strong> A pre-exercise meal or snack containing carbohydrate increases blood glucose and tops up liver glycogen, supporting performance in prolonged or high-intensity sessions.</li>
+        <li><strong>Hormonal effect:</strong> Carbohydrate ingestion raises insulin, which suppresses lipolysis and reduces plasma free fatty acids. Consequently, fat oxidation is reduced, and carbohydrate use is increased during early exercise.</li>
+        <li><strong>Timing:</strong> Larger mixed meals are typically consumed 2–4 hours before exercise, while smaller, more easily digestible snacks (for example 1–2 g/kg carbohydrate) can be taken in the final 60 minutes, depending on GI tolerance.</li>
+        <li><strong>Performance impact:</strong> For most moderate to high-intensity events, especially where carbohydrate is a primary fuel, pre-exercise carbohydrate tends to improve performance. In contrast, fasted or low-glycogen training sessions may be used strategically to emphasise metabolic adaptation rather than acute performance.</li>
       </ul>
 
-      <h3>High-Fat Low-Carb (HFLC) & Ketogenic Diets</h3>
-      <p><strong>The Theory:</strong> If we can teach the body to burn fat, we spare our limited glycogen stores for the end of the race.</p>
-      <p><strong>The Reality:</strong>
-      <ol>
-        <li><strong>Adaptation:</strong> After 5+ days on LCHF, fat oxidation doubles. The body becomes a fat-burning machine.</li>
-        <li><strong>The Downside (PDH):</strong> The enzyme Pyruvate Dehydrogenase (PDH) is downregulated. When the athlete tries to sprint or climb (needing carbs), they can't access that energy quickly.</li>
-        <li><strong>Economy:</strong> Fat is a "premium" fuel in terms of storage, but "expensive" in terms of oxygen. You get less ATP per molecule of Oxygen when burning fat compared to carbs.</li>
-      </ol>
-      </p>
-      <p><strong>Burke et al. (2017) Study:</strong> Elite race walkers on a Keto diet burned tons of fat, but their race times got slower because their exercise economy worsened.</p>
+      <h3>5. Hormones, Signalling, and Substrate Utilisation</h3>
+      <p>Hormones and cellular signalling pathways integrate diet, training, and substrate use:</p>
+      <ul>
+        <li><strong>Insulin:</strong> Promotes glucose uptake, glycogen synthesis, and lipogenesis; suppresses lipolysis and ketogenesis. High carbohydrate intake and feeding states favour carbohydrate use and storage.</li>
+        <li><strong>Glucagon and catecholamines (adrenaline/noradrenaline):</strong> Promote glycogenolysis and lipolysis, increasing availability of glucose and free fatty acids during exercise and fasting.</li>
+        <li><strong>Cortisol:</strong> Supports gluconeogenesis and mobilisation of fuels under prolonged stress. Excessive energy deficit or chronically low carbohydrate availability can elevate cortisol and may contribute to impaired recovery and immune suppression.</li>
+        <li><strong>Cellular signalling:</strong> Low glycogen availability and high metabolic stress activate AMPK and p38 MAPK, which increase expression of genes involved in mitochondrial biogenesis and fat oxidation. Conversely, high carbohydrate availability around key sessions may support higher training quality at the cost of a smaller “stress” signal.</li>
+      </ul>
+      <p><strong>Oxidative stress and inflammation:</strong> Both very high training loads and aggressive low-carbohydrate approaches can increase markers of oxidative stress and inflammation. Adequate carbohydrate around key sessions generally supports immune function and limits excessive stress responses, particularly during heavy training blocks.</p>
 
-      <h3>Carbohydrate Intake & Fat Oxidation</h3>
-      <p>Eating carbs before exercise releases <strong>Insulin</strong>. Insulin is a potent inhibitor of lipolysis (fat breakdown). This is why pre-exercise carbs can lower fat oxidation rates during the session.</p>
+      <h3>6. Application in Sports and Individual Considerations</h3>
+      <p>The “best” dietary strategy depends on the sport, the event demands, and the individual athlete.</p>
+      <ul>
+        <li><strong>Endurance sports (running, cycling, triathlon):</strong> Typically benefit from high carbohydrate availability for key sessions and competition (including carbohydrate loading for longer events), alongside occasional low-glycogen sessions if used carefully for adaptation.</li>
+        <li><strong>Intermittent team sports (football, rugby, hockey):</strong> Require high glycogen availability to sustain repeated sprints and high-intensity efforts across a match. Between-game nutrition focuses on restoring glycogen with adequate carbohydrate and energy.</li>
+        <li><strong>Strength and power sports:</strong> Still require sufficient carbohydrate to support high-intensity training, but total energy and protein are often the primary focus. Very low-carbohydrate diets are usually not advised in heavy training phases.</li>
+        <li><strong>Ultra-endurance and adventure racing:</strong> Higher relative fat oxidation may be advantageous in some contexts, but athletes still benefit from carbohydrate availability at key stages; mixed strategies are often used rather than extreme diets.</li>
+      </ul>
+      <p><strong>Individual factors:</strong></p>
+      <ul>
+        <li><strong>Sex:</strong> There are average sex differences in substrate use (for example women often oxidise relatively more fat at the same absolute intensity), but there is large individual variability. Strategies should be based on the individual, not only on sex.</li>
+        <li><strong>GI tolerance:</strong> Some athletes struggle with large carbohydrate loads or high-fibre foods close to exercise and may need more gradual fuelling or tailored product choices.</li>
+        <li><strong>Metabolic profile:</strong> Laboratory testing (for example RER–intensity curves, maximal fat oxidation assessments) can help fine-tune fuelling plans but do not replace the need for field testing of strategies in training.</li>
+        <li><strong>Training phase:</strong> Off-season, heavy training blocks, taper, and competition phases may all warrant different emphases (for example more aggressive carbohydrate loading in taper, more flexibility off-season).</li>
+      </ul>
+      <p>Overall, dietary strategies should be periodised and individualised, aiming to align substrate availability with the demands of each session and competition, while supporting long-term health, recovery, and adaptation.</p>
     `
   },
   {
@@ -760,129 +810,210 @@ export const TOPICS: Topic[] = [
       <p><strong>The Science:</strong> While caffeine increases urine output at rest, <strong>during exercise</strong>, the body releases catecholamines (adrenaline) which constrict blood flow to the kidneys. This overrides the diuretic effect. Moderate caffeine use does not compromise hydration status during sport.</p>
     `
   },
-  {
+    {
     id: 'buffering-agents',
     title: 'Blood-Acid Buffers (Sodium Bicarbonate)',
-    description: 'Mechanism of extracellular buffering, dosage strategies, and management of side effects.',
+    description: 'How sodium bicarbonate acts as an extracellular buffer, its biochemical effects on glycolysis and pH, dosing strategies, blood bicarbonate threshold concepts, and sport-specific applications.',
     learningObjectives: [
-      'Explain how anaerobic glycolysis leads to muscle acidity and fatigue.',
-      'Describe the mechanism by which sodium bicarbonate improves performance (extracellular buffering).',
-      'Identify the optimal dosage (300 mg/kg) and timing.',
-      'Recognize the effective exercise duration window (1-10 minutes).'
+      'Define what a blood acid buffer is and explain why maintaining blood and muscle pH is important during intense exercise.',
+      'Describe how anaerobic glycolysis and lactic acid production lead to increased hydrogen ion (H+) accumulation and acidosis.',
+      'Explain how sodium bicarbonate increases extracellular buffering capacity, facilitates H+ efflux from muscle, and can delay fatigue in high intensity exercise.',
+      'Outline the biochemical links between glycolysis, lactic acid, NAD+ regeneration, and the need for buffering to maintain enzyme function and ATP production.',
+      'Discuss dosing strategies, the blood bicarbonate threshold concept (e.g. ≥6 mmol/L increase from baseline), side effects, inter-individual variability, and the types of sports where sodium bicarbonate is most effective.'
     ],
     keyPoints: [
-      'High-intensity exercise (1-10 min) relies on anaerobic glycolysis, producing H+ ions (acidity).',
-      'Sodium Bicarbonate increases blood pH and buffering capacity.',
-      'It pulls H+ out of the muscle cell (efflux), delaying intracellular fatigue.',
-      'Optimal Dose: 0.3 g/kg (300 mg/kg) taken 1-2 hours before exercise.',
-      'Major Side Effect: Severe GI distress (diarrhea, bloating) due to high sodium load and CO2 production.'
+      'High intensity exercise (roughly 1–10 minutes) relies heavily on anaerobic glycolysis, producing lactate and H+ which lower pH and impair muscle function.',
+      'Blood bicarbonate (HCO3–) is a major extracellular buffer that reacts with H+ to form carbonic acid, which is converted to CO2 and water and then exhaled.',
+      'Sodium bicarbonate supplementation raises blood bicarbonate concentration and pH, increasing the gradient for H+ efflux from muscle and delaying intracellular acidosis.',
+      'The blood bicarbonate threshold concept suggests that an increase of around 6 mmol/L above baseline is associated with a high likelihood of an ergogenic effect, and the earliest time this rise is achieved can be used to time exercise onset.',
+      'Typical doses are 0.2–0.3 g/kg body mass, but gastrointestinal side effects (bloating, nausea, diarrhoea) are common and dosing and timing must be individualised.'
     ],
     quickSummary: [
-      '<strong>The Problem:</strong> During high-intensity exercise (e.g., 800m run, 2km row), muscles produce Lactic Acid (Lactate + Hydrogen ions). The Hydrogen ions (H+) cause acidity, which stops muscles from contracting.',
-      '<strong>The Solution:</strong> Sodium Bicarbonate (Baking Soda) acts as a blood buffer. It increases the pH of the blood (making it more alkaline).',
-      '<strong>Mechanism:</strong> By making the blood more alkaline, it creates a gradient that pulls H+ <em>out</em> of the muscle faster. This delays the acidity buildup inside the muscle.',
-      '<strong>Window of Effectiveness:</strong> Only works for events lasting <strong>1 to 10 minutes</strong>. Not useful for short sprints (<30s) or long endurance (>1 hour).',
-      '<strong>Side Effects:</strong> Very high risk of "explosive" diarrhea and bloating. Dosage splitting or drinking plenty of water can help manage this.'
+      '<strong>What is a buffer?</strong> A blood acid buffer (such as bicarbonate) helps maintain pH by binding excess H+ and converting it into CO2 and water, which can be removed via the lungs.',
+      '<strong>Why is it needed?</strong> High intensity exercise increases H+ production from glycolysis and lactic acid formation, lowering pH and interfering with enzyme activity and muscle contraction.',
+      '<strong>How sodium bicarbonate works:</strong> Ingested NaHCO3 raises blood bicarbonate and pH. This enlarges the gradient for H+ to leave the muscle, so intracellular pH drops more slowly and high intensity efforts can be sustained for longer.',
+      '<strong>Blood bicarbonate threshold:</strong> An increase of about 6 mmol/L above resting blood bicarbonate is often used as a practical threshold for a likely ergogenic effect. The earliest time point at which this Δ[HCO3–] ≥ 6 mmol/L is reached indicates when exercise should begin.',
+      '<strong>Applied use:</strong> Doses of ~0.3 g/kg taken before events lasting 1–10 minutes can improve performance, but side effects and variation in time to peak or threshold mean that testing dose and timing in training is essential.'
     ],
     fullNotes: `
-      <h3>The Physiology of Acidosis</h3>
-      <p>When you exercise maximally for 60 seconds to 10 minutes, you rely heavily on <strong>Anaerobic Glycolysis</strong>.
-      <br/>- This pathway produces ATP quickly but generates Lactic Acid.
-      <br/>- Lactic Acid dissociates into Lactate and Hydrogen Ions (H+).
-      <br/>- <strong>It is the H+ (acidity)</strong>, not the lactate, that causes fatigue by interfering with muscle contraction enzymes.</p>
-
-      <h3>How Bicarbonate Works</h3>
-      <p>The body has natural buffers (proteins, phosphates, bicarbonate). When these are overwhelmed, pH drops (Acidosis).
-      <br/>- Muscle pH drops from ~7.0 to ~6.5.
-      <br/>- Sodium Bicarbonate (NaHCO3) ingested orally increases the <strong>extracellular (blood) buffering capacity</strong>.
-      <br/>- <strong>H+ Efflux:</strong> Because the blood is now very alkaline (high pH), it draws H+ ions out of the muscle cell more rapidly. This keeps the muscle pH stable for longer, allowing you to push harder.</p>
-
-      <h3>Dosage Strategy</h3>
-      <div class="bg-amber-50 p-4 rounded-md border border-amber-200 my-4">
-        <strong>The Golden Rule:</strong> 300 mg/kg body weight (0.3 g/kg).
-        <br/><em>Example:</em> A 70kg athlete needs 21 grams. This is a LOT of powder!
-      </div>
+      <h3>Blood Acid Buffers and pH Balance</h3>
+      <p>The body tightly regulates pH because many enzymes and ion channels function optimally within a narrow pH range. During intense exercise, hydrogen ions (H+) accumulate in muscle and blood, lowering pH and contributing to fatigue.</p>
       <ul>
-        <li><strong>Timing:</strong> 1 to 2 hours before the event.</li>
-        <li><strong>Minimum Effective Dose:</strong> 200 mg/kg (less side effects, but less effective).</li>
-        <li><strong>Maximum:</strong> Doses >300 mg/kg don't provide extra benefit but guarantee stomach issues.</li>
+        <li><strong>Blood acid buffer:</strong> A substance that can accept or donate H+ to resist changes in pH. In blood, the main buffer system is the bicarbonate (HCO3–) system.</li>
+        <li><strong>Bicarbonate system:</strong> H+ + HCO3– ↔ H2CO3 ↔ CO2 + H2O. Carbon dioxide is then exhaled by the lungs.</li>
+        <li><strong>Why during exercise?</strong> When exercise intensity is high, H+ production exceeds the capacity of intrinsic intracellular buffers, so extracellular buffers like bicarbonate become critical to help maintain pH.</li>
       </ul>
 
-      <h3>The "Explosive" Side Effects</h3>
-      <p>Sodium bicarbonate reacts with stomach acid (HCl) to produce salt, water, and <strong>Carbon Dioxide (CO2)</strong>.
-      <br/>- The CO2 causes massive bloating.
-      <br/>- The high sodium load draws water into the gut (osmotic effect), causing urgent diarrhea.
-      <br/><em>Mitigation:</em> Split the dose over an hour, drink plenty of water, or use delayed-release capsules.</p>
+      <h3>Mechanism of Action of Sodium Bicarbonate</h3>
+      <p>Sodium bicarbonate (NaHCO3) is ingested as a supplement, absorbed into the blood, and increases plasma bicarbonate concentration and pH.</p>
+      <ul>
+        <li><strong>Increased [HCO3–]:</strong> Raises blood buffering capacity and makes the blood more alkaline.</li>
+        <li><strong>H+ efflux:</strong> The higher extracellular pH creates a steeper gradient for H+ to move out of the muscle cell into the blood via transporters (for example MCT co-transport of lactate and H+).</li>
+        <li><strong>Net effect:</strong> Muscle pH is better preserved at a given workload, so glycolytic enzymes and excitation–contraction coupling can continue to function for longer.</li>
+      </ul>
+      <div class="bg-amber-50 p-4 rounded-md border border-amber-200 my-4">
+        <strong>Key idea:</strong> Sodium bicarbonate does not stop H+ production, it simply helps remove H+ from the muscle more quickly by providing more buffering capacity in the blood.
+      </div>
 
-      <h3>Sodium Citrate</h3>
-      <p>An alternative buffer. Dosage ~300-500 mg/kg. Mechanism is similar, side effects are similar, but taste is reportedly worse.</p>
+      <h3>Relationship with Energy Systems and Glycolysis</h3>
+      <p>During high intensity exercise (roughly 30 seconds to 10 minutes), energy demand is high and anaerobic glycolysis becomes a major source of ATP.</p>
+      <ul>
+        <li><strong>Glycolysis:</strong> Glucose is broken down to pyruvate, producing ATP and NADH. Under limited oxygen availability or very high flux, pyruvate is converted to lactate by lactate dehydrogenase.</li>
+        <li><strong>Lactic acid concept:</strong> "Lactic acid" is formed but rapidly dissociates into lactate and H+. It is the accumulation of H+, not lactate itself, that is more strongly linked to acidosis and impaired function.</li>
+        <li><strong>NAD+ regeneration:</strong> The conversion of pyruvate to lactate converts NADH back to NAD+, allowing glycolysis to continue. If pH drops too far, enzyme activity and ion handling are impaired and ATP production becomes less efficient.</li>
+      </ul>
+      <p><strong>Role of buffering:</strong> By buffering H+ in the blood, sodium bicarbonate allows more H+ to exit the muscle. This helps maintain a more favourable intracellular pH, permits continued high glycolytic flux, and supports ongoing ATP production during sustained high intensity efforts.</p>
+      <p><strong>Lactate threshold and tolerance:</strong> Sodium bicarbonate does not fundamentally change the long term training determined lactate threshold, but acutely it can increase tolerance to high lactate and H+ levels. This allows athletes to sustain intensities at or above their usual threshold for longer.</p>
+
+      <h3>Blood Bicarbonate Threshold Concept and Timing</h3>
+      <p>There is substantial individual variability in how quickly and how much blood bicarbonate rises after ingestion of sodium bicarbonate. Rather than relying only on a fixed time (for example 60 minutes), some practitioners use a "blood bicarbonate threshold" to guide timing.</p>
+      <ul>
+        <li><strong>Threshold definition:</strong> An increase in blood bicarbonate of roughly <strong>6 mmol/L above baseline</strong> is often used as a practical threshold associated with a high probability of ergogenic benefit.</li>
+        <li><strong>Δ[HCO3–] calculation:</strong> Δ[HCO3–] = [HCO3–]<sub>time</sub> – [HCO3–]<sub>baseline</sub>.</li>
+        <li><strong>Earliest time to threshold:</strong> Blood samples are taken at intervals (for example every 20–30 minutes) after ingestion. The <strong>earliest time point</strong> at which Δ[HCO3–] ≥ 6 mmol/L is considered the point from which exercise should begin.</li>
+        <li><strong>Application:</strong> If baseline [HCO3–] is 24 mmol/L and measurements after ingestion are 28 mmol/L at 45 minutes, 30 mmol/L at 75 minutes, and 31 mmol/L at 105 minutes, then Δ[HCO3–] is 4, 6, and 7 mmol/L respectively. The threshold is first reached at 75 minutes, so exercise (or race start) would ideally be timed from this point.</li>
+      </ul>
+      <div class="bg-blue-50 p-4 rounded-md border border-blue-200 my-4">
+        <strong>Practical takeaway:</strong> Time to peak bicarbonate and time to reach the 6 mmol/L threshold can differ between individuals. Testing in advance allows athletes to plan ingestion so that threshold is reached shortly before their warm up and main effort.
+      </div>
+
+      <h3>Applied Considerations: Dosing, Performance, and Sport Types</h3>
+      <p><strong>Performance effects:</strong> Meta-analyses generally show small to moderate improvements in performance (often a few percent) in events that are heavily reliant on anaerobic glycolysis, such as 400–1500 m track events, 1–10 minute cycling time trials, repeated sprints, and some combat sports.</p>
+      <ul>
+        <li><strong>Most responsive events:</strong> Efforts lasting approximately 1–10 minutes where anaerobic glycolysis and H+ accumulation are pronounced.</li>
+        <li><strong>Less responsive events:</strong> Very short sprints (<30 seconds) that are dominated by the ATP–PCr system, or long endurance events where fatigue is driven by other factors.</li>
+      </ul>
+
+      <h4>Dosing strategies</h4>
+      <ul>
+        <li><strong>Standard single dose:</strong> ~0.3 g/kg body mass (300 mg/kg) taken in a single bolus 60–180 minutes before exercise.</li>
+        <li><strong>Lower doses:</strong> 0.2 g/kg may still raise bicarbonate but with smaller effects and fewer side effects.</li>
+        <li><strong>Split or serial dosing:</strong> Dividing the total dose into smaller portions over 60–90 minutes, or taking repeated smaller doses across a day, can reduce gastrointestinal discomfort and create a more stable elevation in bicarbonate.</li>
+        <li><strong>Timing:</strong> Without individual blood testing, many protocols use ~60–120 minutes pre exercise as a starting point and refine based on performance and symptoms. With blood testing, the earliest time at which Δ[HCO3–] ≥ 6 mmol/L can be used to fine tune timing.</li>
+      </ul>
+
+      <h4>Side effects and safety</h4>
+      <ul>
+        <li><strong>Gastrointestinal symptoms:</strong> Bloating, nausea, stomach cramps, and diarrhoea are common because NaHCO3 reacts with stomach acid (HCl) to produce CO2 gas and because the high sodium load draws water into the gut.</li>
+        <li><strong>Mitigation strategies:</strong> Taking with a small carbohydrate rich meal, using capsules rather than powder, splitting the dose over time, or slightly reducing total dose can help.</li>
+        <li><strong>Sodium load:</strong> The supplement contributes a large sodium load, which may need consideration in athletes with hypertension or renal issues, though this is less relevant in otherwise healthy individuals.</li>
+      </ul>
+
+      <h4>Individualisation</h4>
+      <p>There is considerable variation in response to sodium bicarbonate:</p>
+      <ul>
+        <li><strong>Responder versus non responder:</strong> Some athletes show large increases in [HCO3–] and clear performance benefits; others have smaller biochemical changes or poorer tolerance.</li>
+        <li><strong>Trial in training:</strong> Dose, timing, and co ingestion with food should be tested in training sessions that mimic competition demands, rather than introduced for the first time on race day.</li>
+        <li><strong>Sport and position specific use:</strong> For example, a middle distance runner or rower may use bicarbonate differently compared with a team sport athlete relying on repeated sprints.</li>
+      </ul>
     `
   },
-  {
+   {
     id: 'fluid-hydration',
     title: 'Fluid Intake & Hydration Strategies',
-    description: 'Impact of dehydration on performance, individual sweat rates, and rehydration protocols.',
+    description: 'Pre-, during- and post-exercise hydration strategies, individual sweat rates, rehydration protocols, and risks of both under- and overhydration.',
     learningObjectives: [
-      'Quantify the effect of dehydration (>2% body mass loss) on aerobic performance.',
-      'Critique the "drink to thirst" vs "planned drinking" debate.',
-      'Calculate post-exercise rehydration needs (1.5 L per kg lost).',
-      'Explain the risks of hyponatremia and overhydration.'
+      'Explain the physiological consequences of dehydration and overhydration on cardiovascular function, thermoregulation, and performance.',
+      'Outline evidence-based pre-exercise hydration guidelines, including recommended fluid volumes, timing, electrolytes, and individual considerations.',
+      'Describe the goals and practical strategies for fluid intake during exercise, including the role of sweat rate assessment, carbohydrates, and electrolytes.',
+      'Calculate post-exercise rehydration needs (1.25–1.5 times the fluid deficit) and explain the importance of sodium and timing for recovery.',
+      'Discuss general and special considerations for hydration, including individual variability, hyponatraemia risk, urine colour, body mass monitoring, beverage choice, environmental conditions, and the impact of caffeine and alcohol.'
     ],
     keyPoints: [
-      'Dehydration >2% body mass impairs aerobic performance, especially in heat.',
-      'Sweat rates vary massively (0.5 - 3.0 L/hour); individual plans are essential.',
-      'Thirst is a delayed signal; planned drinking helps prevents >2% loss.',
-      'Rehydration requires replacing 150% of losses (1.5 L per kg lost) to account for urine production.',
-      'Hyponatremia is a risk with excessive water intake (diluting blood sodium).'
+      'Athletes should begin exercise in a euhydrated state, typically by consuming ~5–7 ml/kg body mass 2–4 hours before exercise, with a smaller top-up if needed.',
+      'During exercise, the main goal is to limit body mass loss to <2% by using individualised plans based on sweat rate, exercise duration, intensity, and environment.',
+      'For post-exercise rehydration, athletes should ingest ~125–150% of the fluid lost (1.25–1.5 L per kg body mass lost), including sodium, to fully restore fluid balance.',
+      'Hydration needs vary considerably; simple tools such as urine colour and pre- to post-exercise body mass changes help monitor hydration and guide individual plans.',
+      'Overhydration with low-sodium fluids can cause hyponatraemia; athletes should avoid “drinking as much as possible” without considering sodium intake and body mass changes.'
     ],
     quickSummary: [
-      '<strong>Dehydration & Performance:</strong> A loss of body water >2% of body weight consistently impairs endurance performance in hot conditions. It increases cardiovascular strain (lower stroke volume, higher heart rate) and core temperature.',
-      '<strong>Sweat Rates:</strong> Highly individual. Can range from 0.5 L/hr to >3 L/hr. You cannot use a "one size fits all" drinking plan.',
-      '<strong>Hyponatremia:</strong> Drinking <em>too much</em> plain water can be fatal. It dilutes blood sodium levels (<135 mmol/L). Symptoms include headache, confusion, and seizure.',
-      '<strong>Rehydration Rule:</strong> After exercise, you must drink more than you lost. The golden rule is <strong>1.5 Liters for every 1 kg lost</strong>. This extra 50% accounts for the urine you will produce while rehydrating.',
-      '<strong>Sports Drinks:</strong> Needed for events >1 hour. They provide Fluid (water), Fuel (carbs), and Electrolytes (sodium) to stimulate thirst and retention.'
+      '<strong>Pre-Exercise:</strong> Start in a well-hydrated (euhydrated) state. A practical guideline is ~5–7 ml/kg body mass 2–4 hours before exercise, with a smaller additional drink (3–5 ml/kg) 1–2 hours before if urine is still dark or minimal. Including some sodium (e.g. in a sports drink or salted snack) helps retain fluid.',
+      '<strong>During Exercise:</strong> The goal is to prevent excessive dehydration (generally >2% body mass loss) and maintain performance. Typical intake is often ~0.4–0.8 L/hour, but this should be individualised based on sweat rate, exercise duration and environmental conditions. For events >60–90 minutes, drinks containing both carbohydrates and electrolytes are advantageous.',
+      '<strong>Post-Exercise:</strong> After exercise, aim to replace approximately 125–150% of the fluid deficit (about 1.25–1.5 L per kg of body mass lost) over the next few hours. Sodium in the recovery drink (or food) is critical to restore plasma volume and reduce urine losses.',
+      '<strong>Monitoring & General Considerations:</strong> Hydration needs are highly individual. Track pre- and post-exercise body mass, observe urine colour, and repeat sweat rate assessments to refine personal plans. Be aware of overdrinking and the risk of exercise-associated hyponatraemia, especially during long events.',
+      '<strong>Special Situations:</strong> Hydration strategies must be adapted for heat, humidity, cold, altitude, sex differences, and sport type. Caffeine has only a small diuretic effect at rest and little impact on hydration during exercise, whereas alcohol is counterproductive to early recovery. Athletes should use trial and error in training to refine what works best for them.'
     ],
     fullNotes: `
-      <h3>Physiological Effects of Dehydration</h3>
-      <p>Water is critical for cooling (sweat) and circulation (blood plasma). When you sweat heavily without drinking:</p>
+      <h3>Physiological Effects of Dehydration and Overhydration</h3>
+      <p>Water is essential for thermoregulation (sweat production) and circulation (blood plasma volume). When you sweat heavily without adequate drinking:</p>
       <ul>
-        <li><strong>Plasma Volume drops:</strong> Blood gets thicker (viscosity increases).</li>
-        <li><strong>Stroke Volume drops:</strong> The heart pumps less blood per beat.</li>
-        <li><strong>Heart Rate rises:</strong> To compensate, HR increases (Cardiac Drift).</li>
-        <li><strong>Core Temperature rises:</strong> Skin blood flow is reduced to save blood for muscles, so you "cook" from the inside.</li>
+        <li><strong>Plasma volume falls:</strong> Blood becomes more viscous.</li>
+        <li><strong>Stroke volume decreases:</strong> The heart pumps less blood per beat.</li>
+        <li><strong>Heart rate rises:</strong> To maintain cardiac output, heart rate drifts upwards (cardiac drift).</li>
+        <li><strong>Core temperature rises:</strong> Skin blood flow is reduced and heat dissipation becomes less effective.</li>
       </ul>
-      <p><strong>The 2% Threshold:</strong> Generally, performance suffers noticeably once 2% of body mass is lost (e.g., 1.4kg for a 70kg runner), especially in the heat.</p>
+      <p><strong>The ~2% threshold:</strong> Endurance performance is consistently impaired once body mass loss exceeds about 2%, especially in hot environments.</p>
+      <p><strong>Overhydration:</strong> Drinking more fluid than is lost, particularly if that fluid is low in sodium, can dilute blood sodium concentration and lead to hyponatraemia. Both dehydration and overhydration can be harmful to health and performance.</p>
 
-      <h3>Hyperhydration vs. Hypohydration</h3>
+      <h3>Pre-Exercise Hydration</h3>
+      <p>Starting exercise in a euhydrated state reduces cardiovascular and thermal strain and helps maintain performance.</p>
       <ul>
-        <li><strong>Hypohydration:</strong> State of low body water (Dehydrated).</li>
-        <li><strong>Euhydration:</strong> State of normal body water (Balanced).</li>
-        <li><strong>Hyperhydration:</strong> Excess body water. Sometimes induced before events using <em>Glycerol</em> to store extra water, though this can cause weight gain and feeling heavy.</li>
+        <li><strong>Why start well hydrated?</strong> Starting in a fluid deficit means that any additional sweat loss rapidly pushes the athlete towards the 2% performance-impairing threshold.</li>
+        <li><strong>Volume guidelines:</strong> A common recommendation is to consume approximately <strong>5–7 ml/kg body mass</strong> of fluid <strong>2–4 hours before exercise</strong>. For a 70 kg athlete this equates to 350–490 ml.</li>
+        <li><strong>Top-up strategy:</strong> If urine is still dark or minimal 2 hours before exercise, a further <strong>3–5 ml/kg</strong> (210–350 ml for 70 kg) can be consumed.</li>
+        <li><strong>Electrolytes:</strong> Including sodium in the pre-exercise fluid (via a sports drink or salted snack) supports fluid retention and stimulates thirst, which is useful if the athlete tends to underdrink.</li>
+        <li><strong>Individual variation:</strong> Heavier sweaters, those not acclimatised to heat, or athletes with a history of cramping may benefit from slightly higher pre-exercise sodium and fluid intake.</li>
+        <li><strong>Urine colour:</strong> A light straw colour is consistent with euhydration. Very dark urine suggests underhydration, very pale urine may indicate overdrinking.</li>
       </ul>
 
-      <h3>Fluid Recommendations</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
-        <div class="bg-blue-50 p-4 rounded border border-blue-200">
-          <h4 class="font-bold text-blue-900">Before</h4>
-          <p class="text-sm">5-7 ml/kg roughly 4 hours before. If no urine produced, drink another 3-5 ml/kg 2 hours before.</p>
-        </div>
-        <div class="bg-green-50 p-4 rounded border border-green-200">
-          <h4 class="font-bold text-green-900">During</h4>
-          <p class="text-sm">Prevent >2% loss. For events >1hr, use drinks with 30-60g carbs and sodium. Drink to thirst for slower athletes; plan for elites.</p>
-        </div>
-        <div class="bg-amber-50 p-4 rounded border border-amber-200">
-          <h4 class="font-bold text-amber-900">After</h4>
-          <p class="text-sm"><strong>The 150% Rule:</strong> Drink 1.5 L fluid for every 1 kg of body weight lost. Must contain sodium to retain the fluid.</p>
-        </div>
-      </div>
+      <h3>Fluid Intake During Exercise</h3>
+      <p>The primary goals during exercise are to limit excessive dehydration, maintain cardiovascular function and thermoregulation, and avoid overhydration.</p>
+      <ul>
+        <li><strong>Goal:</strong> Limit body mass loss to around <strong>2% or less</strong> for most events. Some highly trained athletes may tolerate slightly larger losses, but this should be tested in training.</li>
+        <li><strong>General intake ranges:</strong> Many guidelines suggest starting with around <strong>0.4–0.8 L/hour</strong>, then refining based on measured sweat rate, gastrointestinal tolerance, and event conditions.</li>
+        <li><strong>Individual sweat rates:</strong> Sweat rates can range from <strong>0.5–3.0 L/hour</strong> or more, so a fixed drinking volume for all athletes is not appropriate.</li>
+        <li><strong>Role of carbohydrates:</strong> For continuous exercise lasting >60–90 minutes, fluids containing <strong>30–60 g carbohydrate per hour</strong> support performance. In very long events, intakes may rise towards 90 g/hour from mixed carbohydrate sources if tolerated.</li>
+        <li><strong>Role of electrolytes:</strong> Sodium concentrations in sports drinks are typically 20–60 mmol/L. Sodium helps maintain thirst, supports fluid retention and reduces the risk of hyponatraemia compared with plain water.</li>
+        <li><strong>Adjusting for conditions:</strong> Hot, humid or high-intensity conditions increase sweat loss and may justify higher fluid intake within the athlete’s tolerance. In cool environments or low-intensity sessions, aggressive drinking is unnecessary and may increase hyponatraemia risk.</li>
+        <li><strong>Determining individual needs:</strong> A simple sweat test compares pre- and post-exercise body mass, accounting for fluid intake and urine losses, to estimate sweat rate. Repeating this under different conditions allows an athlete to build an individualised drinking plan.</li>
+      </ul>
 
-      <h3>Hyponatremia: The Silent Killer</h3>
-      <p><strong>Cause:</strong> Drinking fluid (usually plain water) faster than you sweat/pee it out. This dilutes blood sodium levels.</p>
-      <p><strong>Risk Factors:</strong> Slow runners (4+ hour marathoners), excessive drinking advice ("drink as much as possible"), and low body weight.</p>
-      <p><strong>Symptoms:</strong> Bloating, headache, confusion, nausea. Often mistaken for dehydration!</p>
+      <h3>Post-Exercise Rehydration</h3>
+      <p>After exercise, the objectives are to restore fluid and electrolyte balance, support recovery, and prepare for the next session or competition.</p>
+      <ul>
+        <li><strong>Volume:</strong> Because some of the ingested fluid will be lost as urine, athletes are advised to consume approximately <strong>125–150% of the fluid deficit</strong>. Practically, this equates to <strong>1.25–1.5 L per kg of body mass lost</strong>.</li>
+        <li><strong>Sodium:</strong> Sodium is key to effective rehydration. It promotes fluid retention and stimulates thirst. Recovery drinks should contain sodium, or athletes should consume salty foods alongside fluid.</li>
+        <li><strong>Timing:</strong> If recovery time before the next bout is short (e.g. same day or next morning), aggressive rehydration in the first <strong>2–4 hours</strong> post-exercise is important.</li>
+        <li><strong>Beverage type:</strong> Water is suitable if combined with salty food. Sports drinks, milk-based drinks, and oral rehydration solutions may enhance fluid retention due to their electrolyte content and energy density.</li>
+        <li><strong>Performance implications:</strong> Inadequate rehydration can impair subsequent training quality or competition performance, particularly in tournaments or multi-stage events.</li>
+      </ul>
 
-      <h3>Gastric Emptying</h3>
-      <p>Fluid must leave the stomach to be absorbed. High intensity exercise (>80% VO2max) and high carbohydrate concentrations (>8% sugar solutions) slow this down. Sports drinks are usually 6% carb to balance fuel delivery with fluid absorption.</p>
+      <h3>Monitoring Hydration Status</h3>
+      <p>Hydration strategies should be individualised and adjusted based on monitoring.</p>
+      <ul>
+        <li><strong>Body mass changes:</strong> Regularly measuring body mass before and after sessions provides a practical estimate of fluid loss. A ~1 kg loss equates to ~1 L of fluid deficit.</li>
+        <li><strong>Urine colour:</strong> Simple urine colour charts are useful screening tools, although they are influenced by diet and supplements. They should not be used in isolation.</li>
+        <li><strong>Symptom awareness:</strong> Thirst, dry mouth, headache, and an unusual perception of effort can flag issues with hydration, but they are not precise diagnostic tools by themselves.</li>
+      </ul>
+
+      <h3>Hyponatraemia and Overhydration</h3>
+      <p><strong>Hyponatraemia</strong> is a dangerous fall in blood sodium concentration, often defined as <135 mmol/L. In the exercise setting it is usually caused by overdrinking low-sodium fluids.</p>
+      <ul>
+        <li><strong>Primary cause:</strong> Drinking at rates that exceed sweat and urine losses, especially when the fluid is plain water or very low in sodium.</li>
+        <li><strong>Risk factors:</strong> Slow competitors in long events (e.g. marathons >4 hours), “drink as much as possible” advice, low body mass, and high availability of fluid on the course.</li>
+        <li><strong>Symptoms:</strong> Bloating, headache, nausea, confusion, and in severe cases seizure and coma. Symptoms may mimic dehydration, making misdiagnosis a risk.</li>
+        <li><strong>Prevention:</strong> Encourage athletes to avoid drinking beyond their likely losses, use sodium-containing drinks in prolonged events, and monitor body mass changes when possible.</li>
+      </ul>
+
+      <h3>Beverage Choice and General Considerations</h3>
+      <p>Different beverages have different effects on hydration and recovery.</p>
+      <ul>
+        <li><strong>Water:</strong> Appropriate for many situations, but if used alone after heavy sweating it should be combined with salty foods to replace sodium.</li>
+        <li><strong>Sports drinks:</strong> Provide water, carbohydrates, and sodium in one product. Useful during prolonged or intense exercise and after sessions with high sweat loss.</li>
+        <li><strong>Electrolyte solutions:</strong> Low- or zero-calorie drinks with electrolytes are useful when the goal is primarily fluid and sodium replacement without extra energy.</li>
+        <li><strong>Milk-based drinks:</strong> Provide fluid, electrolytes, protein, and carbohydrate, and can be effective post-exercise recovery beverages.</li>
+        <li><strong>Caffeine:</strong> At typical sports doses, caffeine has a modest diuretic effect at rest but does not meaningfully worsen dehydration during exercise. It should be considered within the whole plan rather than avoided outright.</li>
+        <li><strong>Alcohol:</strong> Alcohol increases urine output and can interfere with glycogen resynthesis and muscle repair; it is best avoided in the early post-exercise recovery phase.</li>
+      </ul>
+
+      <h3>Special Considerations and Individualisation</h3>
+      <p>Hydration strategies should be refined through practice and tailored to the athlete, the sport, and the environment.</p>
+      <ul>
+        <li><strong>Sport-specific patterns:</strong> Team sports with breaks, racket sports with changeovers, and continuous endurance events all present different opportunities to drink and may require different strategies.</li>
+        <li><strong>Environmental conditions:</strong> In heat and humidity, sweat rates rise and more aggressive hydration and sodium strategies may be required. At altitude, increased ventilation and diuresis can alter fluid needs. Cold can blunt thirst and reduce spontaneous drinking.</li>
+        <li><strong>Sex and body size:</strong> Average sweat rates and body mass differ between men and women, but there is large overlap. Individual testing is more important than assumptions based on sex alone.</li>
+        <li><strong>Trial and error:</strong> Athletes should test different volumes, beverage types, and sodium contents in training to find a strategy that maintains performance without causing gastrointestinal discomfort.</li>
+      </ul>
     `
   },
   {
@@ -991,74 +1122,194 @@ export const TOPICS: Topic[] = [
     `
   },
   // --- NEW TOPIC: Focus on Data Analysis ---
-  {
+    {
     id: 'data-analysis',
     title: 'Focus on Data Analysis & Interpretation',
-    description: 'Learn to calculate RER, substrate oxidation rates, energy expenditure (Cunningham), and fluid balance.',
+    description: 'Learn to calculate RER, substrate oxidation rates, daily energy requirements (Cunningham), macronutrient targets, and fluid balance.',
     learningObjectives: [
-      'Calculate RER and substrate oxidation rates using stoichiometry formulas.',
-      'Estimate daily energy expenditure (TDEE) using the Cunningham equation.',
-      'Determine sweat rates and fluid needs from body mass changes.'
+      'Calculate RER and carbohydrate and fat oxidation rates (g/min and g/hour) using provided formulas.',
+      'Estimate daily energy requirements using the Cunningham equation and derive carbohydrate, protein, and fat quantities from g/kg targets.',
+      'Determine sweat rates (L/hour) and percentage body mass change from pre- and post-exercise body mass and recorded fluid intake.'
     ],
     keyPoints: [
-      'RER = VCO2/VO2 (0.7 = 100% fat, 1.0 = 100% carbs).',
-      'Energy Expenditure (RMR) is best estimated by Lean Body Mass (LBM) in athletes.',
-      'Sweat Rate = (Pre Weight - Post Weight + Fluid Intake) / Time.'
+      'RER = VCO2 / VO2 (≈0.70 = predominantly fat, ≈1.00 = predominantly carbohydrate).',
+      'Carbohydrate and fat oxidation can be calculated from VO2 and VCO2 using standard stoichiometric equations.',
+      'Cunningham equation: RMR (kcal/day) = 500 + 22 × Lean Body Mass (kg); TDEE = RMR × Activity Factor.',
+      'Macronutrient grams can be derived from g/kg targets, then checked against total kcal (4 kcal/g for carbohydrate and protein, 9 kcal/g for fat).',
+      'Sweat Rate (L/hour) = Total Sweat Loss (L) / Exercise Duration (hours); % Body Mass change = (Mass Loss / Starting Mass) × 100.'
     ],
     quickSummary: [
-      '<strong>Quantifying Physiology:</strong> Sports nutrition relies on numbers. You must be able to calculate how much fuel an athlete burns and how much fluid they lose.',
-      '<strong>Substrate Oxidation:</strong> Using VO2 (oxygen consumed) and VCO2 (carbon dioxide produced), we can calculate exactly how many grams of fat and carbs are being burned per minute.',
-      '<strong>Energy Balance:</strong> To prescribe a diet, we first estimate Resting Metabolic Rate (RMR) and multiply by an Activity Factor. The Cunningham equation is preferred for athletes because it accounts for muscle mass.',
-      '<strong>Hydration math:</strong> Measuring weight loss during a session allows us to calculate sweat rate. Remember: 1kg of weight loss = 1L of fluid loss.'
+      '<strong>1. Substrate Use (Indirect Calorimetry):</strong> From VO2 and VCO2 you can calculate RER, then carbohydrate and fat oxidation in g/min and convert to g/hour. You will be given the equations in the exam.',
+      '<strong>2. Daily Energy Needs:</strong> Use the Cunningham equation with Lean Body Mass (LBM) to estimate Resting Metabolic Rate (RMR), then multiply by an Activity Factor to get Total Daily Energy Expenditure (TDEE).',
+      '<strong>3. Macronutrient Planning:</strong> Convert g/kg targets for carbohydrate and protein into grams, calculate their kcal contribution (4 kcal/g), subtract from TDEE, and use the remaining kcal to determine grams of fat (9 kcal/g).',
+      '<strong>4. Fluid Balance:</strong> Use pre- and post-exercise body mass plus recorded fluid intake to calculate total sweat loss, sweat rate in L/hour, and percentage body mass change.'
     ],
     fullNotes: `
-      <h3>1. Indirect Calorimetry & Substrate Oxidation</h3>
-      <p>We measure gas exchange to see what fuel the body is using.</p>
+      <h3>1. Indirect Calorimetry, RER & Substrate Oxidation</h3>
+      <p>Indirect calorimetry measures oxygen consumption (VO<sub>2</sub>) and carbon dioxide production (VCO<sub>2</sub>), usually in L/min. From these values you can calculate the Respiratory Exchange Ratio (RER) and the rate of carbohydrate and fat oxidation.</p>
+
       <div class="bg-blue-50 p-4 rounded border border-blue-200 mb-4">
-        <strong>The Formulas:</strong><br/>
-        RER = VCO2 / VO2<br/>
-        Carb Oxidation (g/min) = 4.210 × VCO2 – 2.962 × VO2<br/>
-        Fat Oxidation (g/min) = 1.695 × VO2 – 1.701 × VCO2
+        <strong>Key formulas (you will be given these):</strong><br/>
+        RER = VCO<sub>2</sub> / VO<sub>2</sub><br/>
+        Carbohydrate oxidation (g/min) = 4.210 × VCO<sub>2</sub> – 2.962 × VO<sub>2</sub><br/>
+        Fat oxidation (g/min) = 1.695 × VO<sub>2</sub> – 1.701 × VCO<sub>2</sub>
       </div>
-      <h4>Example Walkthrough:</h4>
-      <p>Athlete data: VCO2 = 1.5 L/min, VO2 = 1.8 L/min.</p>
+
+      <h4>Worked example (matches the exam-style question)</h4>
+      <p>Given: VCO<sub>2</sub> = 1.5 L/min, VO<sub>2</sub> = 1.8 L/min.</p>
+      <ol>
+        <li><strong>Step 1 – RER:</strong><br/>
+          RER = 1.5 / 1.8 = 0.833... ≈ <strong>0.83</strong> (to two decimal places).
+        </li>
+        <li><strong>Step 2 – Carbohydrate oxidation (g/min):</strong><br/>
+          Carbohydrate oxidation = (4.210 × 1.5) – (2.962 × 1.8)<br/>
+          = 6.315 – 5.3316 ≈ 0.98 g/min.
+        </li>
+        <li><strong>Step 3 – Fat oxidation (g/min):</strong><br/>
+          Fat oxidation = (1.695 × 1.8) – (1.701 × 1.5)<br/>
+          = 3.051 – 2.5515 ≈ 0.50 g/min.
+        </li>
+        <li><strong>Step 4 – Convert to g/hour:</strong><br/>
+          Multiply by 60 (minutes per hour).<br/>
+          Carbohydrate: 0.98 × 60 ≈ <strong>59.0 g/hour</strong> (one decimal place).<br/>
+          Fat: 0.50 × 60 ≈ <strong>30.0 g/hour</strong> (one decimal place).
+        </li>
+      </ol>
+
+      <p><em>Exam tip:</em> Check your units. If values are given in mL/min, convert to L/min by dividing by 1000 before using the formulas.</p>
+
+      <h4>Practice question</h4>
+      <p>An athlete has VO<sub>2</sub> = 2.0 L/min and VCO<sub>2</sub> = 1.6 L/min. Using the same formulas:</p>
       <ul>
-        <li><strong>RER:</strong> 1.5 / 1.8 = <strong>0.83</strong></li>
-        <li><strong>Carb Ox:</strong> (4.210 × 1.5) - (2.962 × 1.8) = 6.315 - 5.332 = <strong>0.98 g/min</strong></li>
-        <li><strong>Fat Ox:</strong> (1.695 × 1.8) - (1.701 × 1.5) = 3.051 - 2.552 = <strong>0.50 g/min</strong></li>
+        <li>Calculate RER to two decimal places.</li>
+        <li>Calculate carbohydrate and fat oxidation in g/min, then convert each to g/hour (one decimal place).</li>
+      </ul>
+      <p><strong>Check your answers:</strong> RER ≈ 0.80, CHO ≈ 41–42 g/hour, fat ≈ 37–38 g/hour (depending on rounding).</p>
+
+      <hr class="my-6"/>
+
+      <h3>2. Energy Expenditure (Cunningham) & Macronutrient Targets</h3>
+      <p>The Cunningham equation is preferred for athletes because it uses Lean Body Mass (LBM), which reflects metabolically active tissue. You then scale RMR by an Activity Factor and translate macronutrient prescriptions (g/kg) into grams and kcal.</p>
+
+      <div class="bg-green-50 p-4 rounded border border-green-200 mb-4">
+        <strong>Key formulas (you will be given these):</strong><br/>
+        Lean Body Mass (kg) = Body Mass – Fat Mass<br/>
+        Fat Mass (kg) = Body Mass × Body Fat % (as a decimal)<br/><br/>
+        Resting Metabolic Rate (RMR, kcal/day) = 500 + 22 × LBM (kg)<br/>
+        Total Daily Energy Expenditure (TDEE, kcal/day) = RMR × Activity Factor<br/><br/>
+        Carbohydrate grams/day = Body Mass (kg) × CHO requirement (g/kg)<br/>
+        Protein grams/day = Body Mass (kg) × Protein requirement (g/kg)<br/><br/>
+        Energy from carbohydrate = CHO grams × 4 kcal/g<br/>
+        Energy from protein = Protein grams × 4 kcal/g<br/>
+        Energy from fat = Remaining kcal / 9 kcal/g
+      </div>
+
+      <h4>Worked example (matches the exam-style question)</h4>
+      <p>Given:</p>
+      <ul>
+        <li>Body Mass = 60 kg</li>
+        <li>Body Fat % = 15%</li>
+        <li>Activity Factor = 1.5</li>
+        <li>Protein requirement = 1.5 g/kg/day</li>
+        <li>Carbohydrate requirement = 6.0 g/kg/day</li>
       </ul>
 
-      <h3>2. Energy Expenditure (Cunningham Equation)</h3>
-      <p>This equation is better for athletes because it uses Lean Body Mass (LBM).</p>
-      <div class="bg-green-50 p-4 rounded border border-green-200 mb-4">
-        <strong>Formula:</strong> RMR = 500 + (22 × LBM in kg)<br/>
-        Total Daily Energy Expenditure (TDEE) = RMR × Activity Factor
-      </div>
-      <h4>Example Walkthrough:</h4>
-      <p>Athlete: 60kg, 15% Body Fat. Activity Factor 1.5.</p>
       <ol>
-        <li><strong>Calculate Fat Mass:</strong> 60kg × 0.15 = 9kg Fat.</li>
-        <li><strong>Calculate LBM:</strong> 60kg - 9kg = 51kg LBM.</li>
-        <li><strong>Calculate RMR:</strong> 500 + (22 × 51) = 500 + 1122 = <strong>1622 kcal/day</strong>.</li>
-        <li><strong>Calculate TDEE:</strong> 1622 × 1.5 = <strong>2433 kcal/day</strong>.</li>
+        <li><strong>Step 1 – Lean Body Mass (LBM):</strong><br/>
+          Fat Mass = 60 × 0.15 = 9 kg<br/>
+          LBM = 60 – 9 = <strong>51 kg</strong>.
+        </li>
+        <li><strong>Step 2 – RMR (Cunningham):</strong><br/>
+          RMR = 500 + 22 × 51 = 500 + 1122 = <strong>1622 kcal/day</strong>.
+        </li>
+        <li><strong>Step 3 – TDEE:</strong><br/>
+          TDEE = 1622 × 1.5 = <strong>2433 kcal/day</strong> (round to the nearest whole number).
+        </li>
+        <li><strong>Step 4 – Carbohydrate grams:</strong><br/>
+          CHO grams/day = 60 × 6.0 = <strong>360 g/day</strong>.
+        </li>
+        <li><strong>Step 5 – Protein grams:</strong><br/>
+          Protein grams/day = 60 × 1.5 = <strong>90 g/day</strong>.
+        </li>
+        <li><strong>Step 6 – Energy from CHO and protein:</strong><br/>
+          Energy from CHO = 360 × 4 = 1440 kcal<br/>
+          Energy from protein = 90 × 4 = 360 kcal<br/>
+          Total from CHO + protein = 1440 + 360 = <strong>1800 kcal</strong>.
+        </li>
+        <li><strong>Step 7 – Energy and grams of fat:</strong><br/>
+          Remaining kcal for fat = TDEE – 1800 = 2433 – 1800 = 633 kcal<br/>
+          Fat grams/day = 633 ÷ 9 ≈ <strong>70 g/day</strong> (nearest whole number).
+        </li>
       </ol>
 
-      <h3>3. Fluid Balance & Sweat Rate</h3>
-      <p>Used to create hydration plans.</p>
+      <p><em>Exam tip:</em> Always state units and round as instructed (e.g. to a whole number for kcal and grams in this question).</p>
+
+      <h4>Practice question</h4>
+      <p>An athlete has the following characteristics:</p>
+      <ul>
+        <li>Body Mass = 75 kg, Body Fat = 20%, Activity Factor = 1.6</li>
+        <li>Protein requirement = 1.6 g/kg/day</li>
+        <li>Carbohydrate requirement = 5.0 g/kg/day</li>
+      </ul>
+      <p>Repeat the steps above to calculate:</p>
+      <ol>
+        <li>LBM, RMR, and TDEE.</li>
+        <li>Daily grams of carbohydrate and protein.</li>
+        <li>Daily grams of fat.</li>
+      </ol>
+      <p><strong>Check (approximate) answers:</strong> LBM ≈ 60 kg, RMR ≈ 1819 kcal/day, TDEE ≈ 2910 kcal/day, CHO ≈ 375 g, protein ≈ 120 g, fat ≈ 80 g.</p>
+
+      <hr class="my-6"/>
+
+      <h3>3. Fluid Balance, Sweat Rate & Percentage Body Mass Change</h3>
+      <p>We can estimate sweat loss during exercise from changes in body mass combined with any fluid consumed. This is then expressed as a rate (L/hour) and as a percentage change in body mass.</p>
+
       <div class="bg-amber-50 p-4 rounded border border-amber-200 mb-4">
-        <strong>Formula:</strong> Total Sweat Loss = (Start Weight - End Weight) + Fluid Intake
+        <strong>Key formulas (you will be given these):</strong><br/>
+        Total Sweat Loss (L) = (Pre-exercise mass – Post-exercise mass) in kg + Fluid Intake (L)<br/>
+        Sweat Rate (L/hour) = Total Sweat Loss (L) ÷ Exercise Duration (hours)<br/><br/>
+        % Body Mass Change = (Mass Loss (kg) ÷ Pre-exercise Mass (kg)) × 100
       </div>
-      <h4>Example Walkthrough:</h4>
-      <p>Start: 70kg. End: 69kg. Drank: 300ml. Duration: 30 mins.</p>
-      <ol>
-        <li><strong>Weight Loss:</strong> 70 - 69 = 1kg (1000ml).</li>
-        <li><strong>Total Sweat:</strong> 1000ml (loss) + 300ml (intake) = <strong>1300ml</strong> total loss.</li>
-        <li><strong>Rate per Hour:</strong> 1300ml in 30 mins = 2600ml per 60 mins (2.6 L/hr).</li>
-        <li><strong>% Dehydration:</strong> (1kg loss / 70kg start) × 100 = <strong>1.4%</strong>.</li>
-      </ol>
-    `
-  }
 
+      <h4>Worked example (matches the exam-style question)</h4>
+      <p>Given:</p>
+      <ul>
+        <li>Pre-exercise mass = 70 kg</li>
+        <li>Post-exercise mass = 69 kg</li>
+        <li>Fluid intake during exercise = 300 ml (0.3 L)</li>
+        <li>Exercise duration = 30 minutes (0.5 hours)</li>
+      </ul>
+
+      <ol>
+        <li><strong>Step 1 – Mass loss:</strong><br/>
+          Mass loss = 70 – 69 = <strong>1 kg</strong>.
+        </li>
+        <li><strong>Step 2 – Total sweat loss (L):</strong><br/>
+          Convert fluid intake to litres: 300 ml = 0.3 L.<br/>
+          Total Sweat Loss = 1.0 L (from mass loss) + 0.3 L (intake) = <strong>1.3 L</strong>.
+        </li>
+        <li><strong>Step 3 – Sweat rate (L/hour):</strong><br/>
+          Duration = 30 min = 0.5 h.<br/>
+          Sweat Rate = 1.3 ÷ 0.5 = <strong>2.6 L/hour</strong> (one decimal place).
+        </li>
+        <li><strong>Step 4 – % Body Mass change:</strong><br/>
+          % change = (Mass loss ÷ Starting mass) × 100<br/>
+          = (1 ÷ 70) × 100 = 1.428... ≈ <strong>1.4%</strong> reduction in body mass (one decimal place).
+        </li>
+      </ol>
+
+      <p><em>Exam tip:</em> Always check that a loss in mass gives a positive % reduction (do not put a minus sign unless explicitly asked).</p>
+
+      <h4>Practice question</h4>
+      <p>An athlete starts a 90-minute training session at 68 kg and finishes at 66.8 kg. They drink 500 ml of fluid during the session.</p>
+      <ul>
+        <li>Calculate total sweat loss (L).</li>
+        <li>Calculate sweat rate (L/hour) to one decimal place.</li>
+        <li>Calculate the percentage body mass change to one decimal place.</li>
+      </ul>
+      <p><strong>Check your answers (approximate):</strong> Total sweat ≈ 2.1 L, sweat rate ≈ 1.4 L/hour, % body mass change ≈ 1.8%.</p>
+    `
+  },
 ];
 
 export const QUESTIONS: Question[] = [
@@ -1485,6 +1736,26 @@ export const QUESTIONS: Question[] = [
     explanation: 'Bicarbonate stays in the extracellular fluid (blood). By making the blood more alkaline, it draws Hydrogen ions OUT of the muscle cell (efflux) faster, preventing intracellular acidosis.',
     sourceRef: 'Buffers / Mechanism'
   },
+    {
+    id: 'q_buf_5',
+    topicId: 'buffering-agents',
+    type: QuestionType.SCENARIO,
+    difficulty: 'Level 6',
+    text: 'Scenario: A sport scientist is testing an athlete\'s response to sodium bicarbonate. Resting blood bicarbonate is 24 mmol/L.\n\nAfter ingesting 0.3 g/kg sodium bicarbonate, blood bicarbonate is measured at:\n• 45 minutes: 28 mmol/L\n• 75 minutes: 30 mmol/L\n• 105 minutes: 31 mmol/L\n\nUse the following formula and threshold:\nΔ[HCO3–] = [HCO3–]time – [HCO3–]baseline\nA rise of ≥6 mmol/L above baseline is considered a practical blood bicarbonate threshold for a likely ergogenic effect.\n\nTasks:\na) Calculate Δ[HCO3–] at each time point.\nb) Identify the earliest time at which the blood bicarbonate threshold is reached.\nc) Based on this, when should the main high intensity performance bout ideally begin relative to ingestion?',
+    correctAnswer: 'a) Δ[HCO3–] values: 4 mmol/L at 45 min, 6 mmol/L at 75 min, and 7 mmol/L at 105 min. b) The threshold (Δ[HCO3–] ≥ 6 mmol/L) is first reached at 75 minutes. c) The main high intensity effort should be scheduled to start from around 75 minutes after ingestion, with the warm up arranged so that the key bout begins once the threshold has been reached.',
+    explanation: 'Baseline [HCO3–] is 24 mmol/L.\n\nAt 45 min: 28 – 24 = 4 mmol/L (below threshold).\nAt 75 min: 30 – 24 = 6 mmol/L (meets threshold).\nAt 105 min: 31 – 24 = 7 mmol/L (above threshold).\n\nThe earliest time at which Δ[HCO3–] ≥ 6 mmol/L is 75 min. According to the blood bicarbonate threshold concept, this earliest time point is used to guide when exercise should begin. In practice, the athlete would ingest sodium bicarbonate so that their main high intensity performance starts around this time, with their warm up scheduled accordingly.',
+    sourceRef: 'Buffers / Threshold Concept'
+  },
+  {
+    id: 'q_buf_6',
+    topicId: 'buffering-agents',
+    type: QuestionType.SHORT_ANSWER,
+    difficulty: 'Level 6',
+    text: 'Briefly define the blood bicarbonate threshold concept in the context of sodium bicarbonate supplementation and explain how it is used to individualise the timing of exercise.',
+    correctAnswer: 'The blood bicarbonate threshold concept states that an increase in blood bicarbonate of roughly 6 mmol/L or more above baseline is associated with a high likelihood of an ergogenic effect. By taking repeated blood samples after ingestion and calculating Δ[HCO3–] at each time point, the earliest time at which this threshold is reached is identified. Exercise, or the main performance bout, is then scheduled to begin from this time onwards to coincide with the period when extracellular buffering capacity is maximally elevated for that individual.',
+    explanation: 'Rather than assuming a fixed time to peak (for example 60 minutes for everyone), the threshold approach looks for the smallest time point at which Δ[HCO3–] is at least 6 mmol/L above baseline. This respects inter-individual variability in absorption and distribution and provides a more precise way to time sodium bicarbonate ingestion relative to the start of the warm up and the key performance effort.',
+    sourceRef: 'Buffers / Threshold Concept'
+  },
   // --- Fluid & Hydration Questions ---
   {
     id: 'q_hyd_1',
@@ -1543,6 +1814,100 @@ export const QUESTIONS: Question[] = [
     correctAnswer: 1,
     explanation: 'Hyponatremia (low blood sodium) is most commonly caused by "over-drinking" plain water or weak sports drinks, which dilutes the sodium concentration in the blood.',
     sourceRef: 'Hydration / Hyponatremia'
+  },
+    {
+    id: 'q_hyd_5',
+    topicId: 'fluid-hydration',
+    type: QuestionType.MCQ,
+    difficulty: 'Level 5',
+    text: 'Which of the following pre-exercise hydration strategies best reflects current guidelines for a 70 kg athlete starting a training session in a temperate environment?',
+    options: [
+      'Drink 200–300 ml of water 5 minutes before exercise only.',
+      'Drink approximately 350–490 ml of fluid (5–7 ml/kg) 2–4 hours before exercise, with a small top-up if urine remains dark.',
+      'Avoid drinking anything before exercise to prevent bathroom breaks.',
+      'Drink 2–3 litres of plain water in the hour before exercise to ensure maximal hydration.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Pre-exercise guidelines typically recommend ~5–7 ml/kg body mass 2–4 hours before exercise. For a 70 kg athlete this is 350–490 ml. If urine remains dark or minimal, a smaller additional drink (3–5 ml/kg) 1–2 hours before may be used. Drinking excessively in the final hour, or not drinking at all, is not recommended.',
+    sourceRef: 'Hydration / Pre-Exercise'
+  },
+  {
+    id: 'q_hyd_6',
+    topicId: 'fluid-hydration',
+    type: QuestionType.SCENARIO,
+    difficulty: 'Level 5',
+    text: 'Scenario: A 80 kg athlete wants to follow pre-exercise hydration guidelines of 5–7 ml/kg 2–4 hours before training.\n\nUse the following formula:\nPre-exercise fluid volume (ml) = Body mass (kg) × Recommended ml/kg\n\nTasks:\na) Calculate the lower and upper range (in ml) of fluid they should aim to drink 2–4 hours before exercise.\nReport both values as whole numbers.',
+    correctAnswer: 'Lower end ≈ 400 ml, upper end ≈ 560 ml.',
+    explanation: 'Using the formula: Volume (ml) = Body mass × ml/kg.\nLower end: 80 kg × 5 ml/kg = 400 ml.\nUpper end: 80 kg × 7 ml/kg = 560 ml.\nTherefore, a practical range is about 400–560 ml 2–4 hours before exercise.',
+    sourceRef: 'Hydration / Pre-Exercise'
+  },
+  {
+    id: 'q_hyd_7',
+    topicId: 'fluid-hydration',
+    type: QuestionType.MCQ,
+    difficulty: 'Level 5',
+    text: 'Which in-exercise fluid strategy is most appropriate for a 90-minute continuous run in warm conditions for a well-trained endurance runner?',
+    options: [
+      'Drink only plain water ad libitum, aiming to replace 100% of sweat losses every 15 minutes.',
+      'Avoid drinking during exercise to minimise gastrointestinal discomfort and bathroom breaks.',
+      'Drink an individualised volume based on sweat rate (typically ~0.4–0.8 L/hour), using a sports drink providing carbohydrates and sodium.',
+      'Drink as much as possible at every opportunity to ensure body mass does not change.'
+    ],
+    correctAnswer: 2,
+    explanation: 'During prolonged exercise in the heat, the goal is to limit excessive dehydration (generally <2% body mass loss) while avoiding overdrinking. Individualised plans based on measured or estimated sweat rate (often ~0.4–0.8 L/hour) using drinks containing both carbohydrates and sodium are recommended. Strategies to replace 100% of sweat loss or to “drink as much as possible” increase the risk of hyponatraemia.',
+    sourceRef: 'Hydration / During Exercise'
+  },
+  {
+    id: 'q_hyd_8',
+    topicId: 'fluid-hydration',
+    type: QuestionType.SCENARIO,
+    difficulty: 'Level 5',
+    text: 'Scenario: A footballer weighs 75 kg before a match and 73.8 kg afterwards. They did not urinate during the match.\n\nYou are told that effective post-exercise rehydration should replace 125–150% of the fluid deficit using the following formula:\nFluid volume to ingest (L) = Body mass lost (kg) × Replacement factor (1.25–1.5)\n\nTasks:\na) Calculate the body mass lost during the match.\nb) Calculate the recommended minimum and maximum fluid volumes they should aim to drink in the hours after the match. Report your answers in litres to one decimal place.',
+    correctAnswer: 'a) Mass lost = 1.2 kg. b) Recommended range ≈ 1.5–1.8 L.',
+    explanation: 'Mass loss: 75.0 – 73.8 = 1.2 kg.\nFluid volume: 1.2 kg × 1.25 = 1.5 L (minimum) and 1.2 kg × 1.5 = 1.8 L (maximum).\nTherefore, they should aim for roughly 1.5–1.8 L over the next few hours, ideally including sodium to support fluid retention.',
+    sourceRef: 'Hydration / Post-Exercise'
+  },
+  {
+    id: 'q_hyd_9',
+    topicId: 'fluid-hydration',
+    type: QuestionType.SHORT_ANSWER,
+    difficulty: 'Level 5',
+    text: 'Identify two simple field-based methods an athlete or practitioner can use to monitor hydration status across training days and briefly explain how each is interpreted.',
+    correctAnswer: '1) Pre- to post-exercise body mass: repeated measurements allow estimation of fluid losses; a body mass loss >2% in single sessions suggests excessive dehydration. 2) Urine colour: light straw-coloured urine is generally consistent with euhydration, while very dark urine suggests underhydration and very pale urine may indicate overdrinking.',
+    explanation: 'Changes in body mass across a session (1 kg ≈ 1 L) provide a practical estimate of acute fluid loss and can be tracked over time. Urine colour charts give a quick, low-cost indication of hydration status, though they can be influenced by diet and supplements and should be interpreted alongside other information.',
+    sourceRef: 'Hydration / Monitoring'
+  },
+  {
+    id: 'q_hyd_10',
+    topicId: 'fluid-hydration',
+    type: QuestionType.MCQ,
+    difficulty: 'Level 6',
+    text: 'Which of the following scenarios MOST increases the risk of exercise-associated hyponatraemia in endurance events?',
+    options: [
+      'A runner who loses 3% of body mass during a marathon in hot conditions despite drinking a sodium-containing sports drink.',
+      'A slow marathon runner who gains 1–2% body mass during the race by frequently drinking large volumes of plain water at every aid station.',
+      'An elite runner who drinks to thirst and finishes with a 2% body mass loss.',
+      'An athlete who drinks a moderate volume of sports drink and consumes salty snacks during an ultramarathon.'
+    ],
+    correctAnswer: 1,
+    explanation: 'Hyponatraemia is most commonly associated with overdrinking hypotonic or low-sodium fluids, leading to a net gain in body mass and dilution of plasma sodium. A slow runner who gains body mass during a race by consuming large volumes of plain water fits this high-risk profile. Moderate body mass losses with sodium-containing drinks are far less risky.',
+    sourceRef: 'Hydration / Hyponatraemia'
+  },
+  {
+    id: 'q_hyd_11',
+    topicId: 'fluid-hydration',
+    type: QuestionType.MCQ,
+    difficulty: 'Level 5',
+    text: 'Which statement best describes the impact of caffeine and alcohol on hydration in the context of exercise?',
+    options: [
+      'Caffeine and alcohol both cause large diuresis during exercise, so neither should ever be consumed around training or competition.',
+      'Caffeine at typical sports doses has little practical impact on hydration during exercise, whereas alcohol after exercise can impair rehydration and recovery.',
+      'Caffeine completely prevents dehydration during exercise, whereas alcohol improves sodium retention.',
+      'Caffeine and alcohol have no effect on urine output or recovery, so they can be ignored in hydration planning.'
+    ],
+    correctAnswer: 1,
+    explanation: 'At usual ergogenic doses, caffeine has only a modest diuretic effect at rest and does not meaningfully worsen dehydration during exercise; it can be used within an overall hydration plan. Alcohol, in contrast, increases urine output and can interfere with optimal rehydration and recovery and is therefore best limited in the early post-exercise period.',
+    sourceRef: 'Hydration / Beverage Choice'
   },
   // --- Supplement Safety Questions ---
   {
@@ -1632,35 +1997,34 @@ export const QUESTIONS: Question[] = [
   },
 
   // --- NEW Data Analysis Questions ---
-  {
+    {
     id: 'q_calc_1',
     topicId: 'data-analysis',
     type: QuestionType.SCENARIO,
     difficulty: 'Level 6',
-    text: 'Scenario: Indirect calorimetry data shows VCO2 = 2.5 L/min and VO2 = 2.5 L/min. 1) Calculate the RER. 2) Based on this RER, what is the primary fuel source?',
-    correctAnswer: 'RER = 1.0. Primary fuel is 100% Carbohydrate.',
-    explanation: 'RER = VCO2/VO2 = 2.5/2.5 = 1.0. An RER of 1.0 indicates that carbohydrates are the exclusive fuel source being oxidized.',
+    text: 'Scenario: An athlete is undergoing an exercise test in a physiology laboratory. The indirect calorimetry data show a rate of CO2 release (V̇CO2) of 1500 mL/min and oxygen consumption (V̇O2) of 1800 mL/min.\n\nUse the following equations:\nRER = VCO2 / VO2\nCarbohydrate oxidation (g/min) = 4.210 × VCO2 – 2.962 × VO2\nFat oxidation (g/min) = 1.695 × VO2 – 1.701 × VCO2\n\nRemember to convert mL/min to L/min before using the equations.\n\nTasks:\na) Calculate the Respiratory Exchange Ratio (RER) for this athlete. Report your answer to two decimal places.\nb) Calculate the rate of carbohydrate oxidation in grams per hour. Report your answer to one decimal place.\nc) Calculate the rate of fat oxidation in grams per hour. Report your answer to one decimal place.',
+    correctAnswer: 'a) RER = 0.83. b) Carbohydrate oxidation ≈ 59.0 g/hour. c) Fat oxidation ≈ 30.0 g/hour.',
+    explanation: 'First convert to L/min: VCO2 = 1500 mL/min = 1.5 L/min, VO2 = 1800 mL/min = 1.8 L/min.\n\na) RER = VCO2 / VO2 = 1.5 / 1.8 = 0.833..., which rounds to 0.83 (two decimal places).\n\nb) Carbohydrate oxidation (g/min) = (4.210 × 1.5) – (2.962 × 1.8)\n= 6.315 – 5.3316 ≈ 0.98 g/min.\nTo convert to g/hour, multiply by 60: 0.98 × 60 ≈ 58.8 ≈ 59.0 g/hour (one decimal place).\n\nc) Fat oxidation (g/min) = (1.695 × 1.8) – (1.701 × 1.5)\n= 3.051 – 2.5515 ≈ 0.50 g/min.\nConvert to g/hour: 0.50 × 60 ≈ 30.0 g/hour (one decimal place).',
     sourceRef: 'Data Analysis / Substrate Oxidation'
   },
-  {
+    {
     id: 'q_calc_2',
     topicId: 'data-analysis',
     type: QuestionType.SCENARIO,
     difficulty: 'Level 6',
-    text: 'Scenario: An athlete weighs 80kg with 10% body fat. Using the Cunningham Equation (RMR = 500 + 22 x LBM), calculate their Resting Metabolic Rate (RMR).',
-    correctAnswer: '2084 kcal/day',
-    explanation: '1. Fat Mass = 80 * 0.10 = 8kg. 2. LBM = 80 - 8 = 72kg. 3. RMR = 500 + (22 * 72) = 500 + 1584 = 2084 kcal/day.',
+    text: 'Scenario: You are provided with the following information about an individual:\n• Body Mass: 60 kg\n• Body Fat Percentage: 15%\n• Height: 160 cm\n• Age: 20 years\n• Activity Factor: 1.5\n• Protein Requirement: 1.5 g/kg of body mass per day\n• Carbohydrate Requirement: 6.0 g/kg of body mass per day\n\nUse the Cunningham equation:\nResting metabolic rate (RMR, kcal/day) = 500 + 22 × Lean Body Mass (kg)\nTotal daily energy expenditure (TDEE, kcal/day) = RMR × Activity Factor\n\nUse the following energy values:\n• Carbohydrate = 4 kcal/g\n• Protein = 4 kcal/g\n• Fat = 9 kcal/g\n\nTasks:\na) Use the Cunningham equation to calculate their daily energy requirement (TDEE). Report to the nearest whole number.\nb) Calculate the daily quantity of carbohydrate required in grams. Report as a whole number.\nc) Calculate the daily quantity of protein required in grams. Report as a whole number.\nd) Given the energy requirement and the carbohydrate and protein quantities, calculate the quantity of fat required daily in grams. Report as a whole number.',
+    correctAnswer: 'a) TDEE ≈ 2433 kcal/day. b) Carbohydrate ≈ 360 g/day. c) Protein ≈ 90 g/day. d) Fat ≈ 70 g/day.',
+    explanation: 'Step 1 – Calculate Lean Body Mass (LBM):\nFat Mass = 60 × 0.15 = 9 kg.\nLBM = 60 – 9 = 51 kg.\n\nStep 2 – Calculate RMR (Cunningham):\nRMR = 500 + 22 × 51 = 500 + 1122 = 1622 kcal/day.\n\nStep 3 – Calculate TDEE:\nTDEE = 1622 × 1.5 = 2433 kcal/day (nearest whole number).\n\nStep 4 – Carbohydrate grams:\nCHO grams = 60 × 6.0 = 360 g/day.\n\nStep 5 – Protein grams:\nProtein grams = 60 × 1.5 = 90 g/day.\n\nStep 6 – Energy from CHO and protein:\nEnergy from CHO = 360 × 4 = 1440 kcal.\nEnergy from protein = 90 × 4 = 360 kcal.\nTotal = 1440 + 360 = 1800 kcal.\n\nStep 7 – Energy and grams of fat:\nRemaining kcal = TDEE – 1800 = 2433 – 1800 = 633 kcal.\nFat grams = 633 ÷ 9 ≈ 70.3, which rounds to 70 g/day.',
     sourceRef: 'Data Analysis / Energy Expenditure'
   },
-  {
+    {
     id: 'q_calc_3',
     topicId: 'data-analysis',
     type: QuestionType.SCENARIO,
     difficulty: 'Level 6',
-    text: 'Scenario: A runner starts a 1-hour race at 60kg and finishes at 59kg. They drank 500ml of water during the run. Calculate their total sweat rate in L/hr.',
-    correctAnswer: '1.5 L/hr',
-    explanation: 'Weight loss = 1kg (1000ml). Fluid intake = 500ml. Total sweat loss = 1000 + 500 = 1500ml. Since the run was 1 hour, the rate is 1.5 L/hr.',
+    text: 'Scenario: An individual participating in a training session is recorded to have a body mass of 70 kg before starting exercise. After completing a 30-minute session, their body mass is measured at 69 kg. It is also noted that the individual consumed 300 ml of fluid during this period.\n\nUse the following formulas:\nTotal Sweat Loss (L) = (Pre-exercise mass – Post-exercise mass) in kg + Fluid Intake (L)\nSweat Rate (L/hour) = Total Sweat Loss (L) ÷ Exercise Duration (hours)\n% Body Mass Change = (Mass Loss (kg) ÷ Pre-exercise Mass (kg)) × 100\n\nTasks:\na) Calculate the total sweat loss during the training session and express it as a rate per hour. Include the appropriate unit of measurement and report the sweat rate to one decimal place.\nb) Determine the percentage change in body mass that occurred as a result of the training session. Express your answer to one decimal place.',
+    correctAnswer: 'a) Total sweat loss = 1.3 L; Sweat rate ≈ 2.6 L/hour. b) Percentage body mass loss ≈ 1.4%.',
+    explanation: 'Step 1 – Mass loss:\nMass loss = 70 – 69 = 1 kg.\n\nStep 2 – Convert fluid intake to litres:\n300 ml = 0.3 L.\n\nStep 3 – Total Sweat Loss:\nTotal Sweat Loss = 1.0 L (from mass loss) + 0.3 L (fluid consumed) = 1.3 L.\n\nStep 4 – Sweat Rate:\nExercise duration = 30 minutes = 0.5 hours.\nSweat Rate = 1.3 L ÷ 0.5 h = 2.6 L/hour (one decimal place).\n\nStep 5 – % Body Mass Change:\n% change = (Mass loss ÷ Starting mass) × 100 = (1 ÷ 70) × 100 = 1.428..., which rounds to 1.4% body mass loss (one decimal place).',
     sourceRef: 'Data Analysis / Fluid Balance'
-  }
-
+  },
 ];
