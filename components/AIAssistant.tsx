@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { askAI } from '../services/ai';
 import { useLocation } from 'react-router-dom';
 import { ChatMessage } from '../types';
+import { useAuth } from '../context/AuthContext';
 
 export const AIAssistant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +12,9 @@ export const AIAssistant: React.FC = () => {
   const [showHint, setShowHint] = useState(true);
   const location = useLocation();
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  
+  // Get API key from context
+  const { geminiApiKey } = useAuth();
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -38,6 +42,11 @@ export const AIAssistant: React.FC = () => {
     e?.preventDefault();
     if (!input.trim() || isLoading) return;
 
+    if (!geminiApiKey) {
+      setMessages(prev => [...prev, { role: 'assistant', text: "Please set your Gemini API Key in the Login screen to use the AI." }]);
+      return;
+    }
+
     const userMsg = input.trim();
     setInput('');
     
@@ -46,23 +55,31 @@ export const AIAssistant: React.FC = () => {
     setIsLoading(true);
 
     const context = getContext();
-    const answer = await askAI(newHistory, context);
+    const answer = await askAI(newHistory, context, geminiApiKey);
 
     setMessages((prev) => [...prev, { role: 'assistant', text: answer }]);
     setIsLoading(false);
   };
 
   const handlePromptClick = (prompt: string) => {
+    if (!geminiApiKey) {
+      setMessages(prev => [...prev, { role: 'assistant', text: "Please set your Gemini API Key in the Login screen to use the AI." }]);
+      setIsOpen(true);
+      return;
+    }
+
     const newHistory: ChatMessage[] = [...messages, { role: 'user', text: prompt }];
     setMessages(newHistory);
     setIsLoading(true);
     
     const context = getContext();
-    askAI(newHistory, context).then(answer => {
+    askAI(newHistory, context, geminiApiKey).then(answer => {
          setMessages((prev) => [...prev, { role: 'assistant', text: answer }]);
          setIsLoading(false);
     });
   };
+
+  if (!geminiApiKey) return null;
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none">

@@ -50,8 +50,8 @@ export const Foundations: React.FC = () => {
       </div>
 
       {/* Controls */}
-      <div className="bg-white shadow rounded-lg p-4 mb-8 flex flex-col md:flex-row gap-4 sticky top-20 z-10 border border-gray-100">
-        <div className="flex-1">
+      <div className="bg-white shadow rounded-lg p-6 mb-8 border border-gray-100 sticky top-20 z-10">
+        <div className="mb-6">
           <input
             type="text"
             placeholder="Search terms (e.g., Glycogen, ATP)..."
@@ -60,20 +60,25 @@ export const Foundations: React.FC = () => {
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-primary focus:border-primary outline-none"
           />
         </div>
-        <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
-                selectedCategory === cat 
-                  ? 'bg-primary text-white shadow-md' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+        
+        {/* Category Filters - Refactored to wrap */}
+        <div>
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Filter by Category</p>
+          <div className="flex flex-wrap gap-2">
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 border ${
+                  selectedCategory === cat 
+                    ? 'bg-primary text-white border-primary shadow-sm' 
+                    : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

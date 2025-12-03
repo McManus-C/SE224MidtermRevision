@@ -33,7 +33,7 @@ export interface Topic {
   fullNotes: string; // HTML string for detailed study
 }
 
-export type GlossaryCategory = 'Basics' | 'Metabolism' | 'Nutrition' | 'Physiology' | 'Research' | 'Molecular Biology' | 'Energy Systems' | 'Units';
+export type GlossaryCategory = 'Basics' | 'Metabolism' | 'Nutrition' | 'Physiology' | 'Research' | 'Molecular Biology' | 'Energy Systems' | 'Units' | 'Supplements' | 'Analysis';
 
 export interface GlossaryTerm {
   id: string;

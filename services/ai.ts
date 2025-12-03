@@ -2,21 +2,32 @@ import { GoogleGenAI } from "@google/genai";
 import { TOPICS, GLOSSARY } from "../data";
 import { ChatMessage } from "../types";
 
-let ai: GoogleGenAI | null = null;
+let aiClient: GoogleGenAI | null = null;
+let currentKey: string | null = null;
 
-const getAI = () => {
-  if (!ai) {
-    ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Initialize or update the AI client with a user-provided key
+export const initAI = (apiKey: string) => {
+  if (apiKey !== currentKey) {
+    aiClient = new GoogleGenAI({ apiKey });
+    currentKey = apiKey;
   }
-  return ai;
 };
 
 export const askAI = async (
   history: ChatMessage[],
-  context?: { topicId?: string; termId?: string }
+  context?: { topicId?: string; termId?: string },
+  apiKey?: string
 ): Promise<string> => {
   try {
-    const aiClient = getAI();
+    // If a key is passed directly (e.g. from context), use it to ensure init
+    if (apiKey) {
+      initAI(apiKey);
+    }
+
+    if (!aiClient) {
+      return "Please set your Gemini API Key in the Login screen to use the AI Tutor.";
+    }
+
     let contextText = "";
 
     // Build context based on what the user is looking at
@@ -71,6 +82,6 @@ export const askAI = async (
     return response.text || "I'm sorry, I couldn't generate an answer at the moment.";
   } catch (error) {
     console.error("Error calling AI:", error);
-    return "Sorry, I'm having trouble connecting to the AI tutor right now. Please try again later.";
+    return "Sorry, I'm having trouble connecting to the AI tutor. Please check your API Key and connection.";
   }
 };

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 export const Header: React.FC = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { logout } = useAuth();
 
   const getLinkClass = (path: string) => {
     const base = "px-3 py-2 rounded-md text-sm font-medium transition-colors";
@@ -31,6 +33,12 @@ export const Header: React.FC = () => {
             <Link to="/foundations" className={getLinkClass('/foundations')}>Foundations</Link>
             <Link to="/topics" className={getLinkClass('/topics')}>Topics</Link>
             <Link to="/exam" className={getLinkClass('/exam')}>Exam Mode</Link>
+            <button 
+              onClick={() => logout()}
+              className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-red-600 hover:bg-red-50 transition-colors"
+            >
+              Sign Out
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -59,6 +67,12 @@ export const Header: React.FC = () => {
             <Link to="/foundations" onClick={() => setMobileMenuOpen(false)} className={`block ${getLinkClass('/foundations')} w-full`}>Foundations</Link>
             <Link to="/topics" onClick={() => setMobileMenuOpen(false)} className={`block ${getLinkClass('/topics')} w-full`}>Topics</Link>
             <Link to="/exam" onClick={() => setMobileMenuOpen(false)} className={`block ${getLinkClass('/exam')} w-full`}>Exam Mode</Link>
+            <button 
+              onClick={() => logout()}
+              className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium text-red-600 hover:bg-red-50"
+            >
+              Sign Out
+            </button>
           </div>
         </div>
       )}
