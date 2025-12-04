@@ -12,14 +12,18 @@ export const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [apiKeyInput, setApiKeyInput] = useState('');
+  const [rememberKey, setRememberKey] = useState(false); // New state for checkbox
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const { setGeminiApiKey, geminiApiKey } = useAuth();
 
-  // Load existing key if available
+  // Load existing key if available (e.g. from LocalStorage)
   React.useEffect(() => {
-    if (geminiApiKey) setApiKeyInput(geminiApiKey);
+    if (geminiApiKey) {
+        setApiKeyInput(geminiApiKey);
+        setRememberKey(true); // Assume if it loaded, it was remembered
+    }
   }, [geminiApiKey]);
 
   const handleAuth = async (e: React.FormEvent) => {
@@ -34,9 +38,10 @@ export const Login: React.FC = () => {
         await createUserWithEmailAndPassword(auth, email, password);
       }
       
-      // Save API Key if entered and valid length (simple check)
+      // Save API Key if entered and valid length
       if (apiKeyInput.trim().length > 10) {
-        setGeminiApiKey(apiKeyInput.trim());
+        // Pass the 'rememberKey' boolean to the context
+        setGeminiApiKey(apiKeyInput.trim(), rememberKey);
       }
     } catch (err: any) {
       // Clean up firebase error messages
@@ -79,8 +84,17 @@ export const Login: React.FC = () => {
               <li className="flex items-center"><svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg> Use your own Gemini API Key</li>
             </ul>
           </div>
-          <div className="mt-8 pt-8 border-t border-teal-600 text-xs text-teal-200">
-            By Dr Chris McManus
+          
+          <div className="mt-8 pt-6 border-t border-teal-600">
+            <p className="text-xs text-teal-200 font-medium mb-3">By Dr Chris McManus</p>
+            
+            {/* Disclaimer Box */}
+            <div className="bg-teal-800/50 p-3 rounded-lg border border-teal-700 backdrop-blur-sm">
+              <p className="text-[10px] leading-relaxed text-teal-100 text-justify">
+                <strong>Disclaimer:</strong> This app is a <em>beta version</em>; stability is not guaranteed and errors may occur. 
+                It is designed as a <strong>supplement</strong> to your revision methods and does <strong>not</strong> replace attendance at lectures, using Listen Again recordings, or reading the Essential Text.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -127,6 +141,10 @@ export const Login: React.FC = () => {
                 Your key is stored <strong>locally on your device</strong>. We do not see or save it on our servers.
               </p>
               
+              <div className="bg-red-50 p-3 rounded-md mb-3 text-xs text-red-800 border border-red-100">
+                <strong>IMPORTANT:</strong> DO NOT disclose your API Key to anyone. Treat it like a password. If shared, others can use your quota.
+              </div>
+              
               <div className="bg-blue-50 p-3 rounded-md mb-3 text-xs text-blue-800 border border-blue-100">
                 <strong>How to get a key:</strong>
                 <ol className="list-decimal list-inside mt-1 space-y-1">
@@ -143,6 +161,20 @@ export const Login: React.FC = () => {
                 value={apiKeyInput}
                 onChange={(e) => setApiKeyInput(e.target.value)}
               />
+
+              {/* Remember Me Checkbox */}
+              <div className="flex items-center mt-2">
+                <input
+                  id="remember-key"
+                  type="checkbox"
+                  checked={rememberKey}
+                  onChange={(e) => setRememberKey(e.target.checked)}
+                  className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
+                />
+                <label htmlFor="remember-key" className="ml-2 block text-xs text-gray-700">
+                  Save API Key on this device (Uncheck if on shared computer)
+                </label>
+              </div>
             </div>
 
             <button 

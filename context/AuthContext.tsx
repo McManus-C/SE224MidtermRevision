@@ -6,7 +6,7 @@ interface AuthContextType {
   user: User | null;
   loading: boolean;
   geminiApiKey: string | null;
-  setGeminiApiKey: (key: string) => void;
+  setGeminiApiKey: (key: string, persist: boolean) => void;
   logout: () => Promise<void>;
 }
 
@@ -23,8 +23,12 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  
+  // Initialize key from Storage (Local takes precedence if they chose to remember it previously)
   const [geminiApiKey, setGeminiKeyState] = useState<string | null>(() => {
-    return localStorage.getItem('gemini_api_key');
+    const local = localStorage.getItem('gemini_api_key');
+    const session = sessionStorage.getItem('gemini_api_key');
+    return local || session;
   });
 
   useEffect(() => {
@@ -35,13 +39,24 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return unsubscribe;
   }, []);
 
-  const setGeminiApiKey = (key: string) => {
+  const setGeminiApiKey = (key: string, persist: boolean) => {
     setGeminiKeyState(key);
-    localStorage.setItem('gemini_api_key', key);
+    if (persist) {
+      localStorage.setItem('gemini_api_key', key);
+      sessionStorage.removeItem('gemini_api_key'); // Clean up session if moving to local
+    } else {
+      sessionStorage.setItem('gemini_api_key', key);
+      localStorage.removeItem('gemini_api_key'); // Clean up local if switching to temp
+    }
   };
 
   const logout = async () => {
     await signOut(auth);
+    // On logout, always clear the Session storage key.
+    // We ONLY keep the Local storage key if the user explicitly asked to "Remember" it previously.
+    // If they didn't check "Remember", it is only in Session, so this line wipes it.
+    sessionStorage.removeItem('gemini_api_key');
+    setGeminiKeyState(localStorage.getItem('gemini_api_key')); // Reset state to whatever is persisted (or null)
   };
 
   const value = {

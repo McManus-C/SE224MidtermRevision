@@ -5,9 +5,18 @@ import { ChatMessage } from "../types";
 let aiClient: GoogleGenAI | null = null;
 let currentKey: string | null = null;
 
+// Helper to get key from storage if needed
+const getStoredKey = () => {
+    if (typeof window !== 'undefined') {
+        // Priority: Local (Persistent) -> Session (Temporary)
+        return localStorage.getItem('gemini_api_key') || sessionStorage.getItem('gemini_api_key');
+    }
+    return null;
+}
+
 // Initialize or update the AI client with a user-provided key
 export const initAI = (apiKey: string) => {
-  if (apiKey !== currentKey) {
+  if (apiKey && apiKey !== currentKey) {
     aiClient = new GoogleGenAI({ apiKey });
     currentKey = apiKey;
   }
@@ -19,13 +28,18 @@ export const askAI = async (
   apiKey?: string
 ): Promise<string> => {
   try {
-    // If a key is passed directly (e.g. from context), use it to ensure init
+    // 1. Prefer passed key
     if (apiKey) {
       initAI(apiKey);
+    } 
+    // 2. Fallback: Check if client is already init, if not, try storages
+    else if (!aiClient) {
+        const stored = getStoredKey();
+        if (stored) initAI(stored);
     }
 
     if (!aiClient) {
-      return "Please set your Gemini API Key in the Login screen to use the AI Tutor.";
+      return "Please set your Gemini API Key in the Login screen or Settings to use the AI Tutor.";
     }
 
     let contextText = "";

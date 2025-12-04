@@ -3,6 +3,7 @@ import { GLOSSARY, TOPICS } from '../data';
 import { Link } from 'react-router-dom';
 import { askAI } from '../services/ai';
 import { ChatMessage } from '../types';
+import { useAuth } from '../context/AuthContext';
 
 export const Foundations: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -10,6 +11,9 @@ export const Foundations: React.FC = () => {
   const [expandedTerm, setExpandedTerm] = useState<string | null>(null);
   const [aiResponse, setAiResponse] = useState<Record<string, string>>({});
   const [loadingAi, setLoadingAi] = useState<string | null>(null);
+  
+  // Get API key from auth context
+  const { geminiApiKey } = useAuth();
 
   // Group terms by category
   const categories = ['All', ...Array.from(new Set(GLOSSARY.map(t => t.category)))];
@@ -33,7 +37,8 @@ export const Foundations: React.FC = () => {
       { role: 'user', text: `Explain the term "${term.term}" in simple sports nutrition terms and give me a practical example.` }
     ];
 
-    const answer = await askAI(history, { termId });
+    // Pass the API key from context here
+    const answer = await askAI(history, { termId }, geminiApiKey || undefined);
     
     setAiResponse(prev => ({ ...prev, [termId]: answer }));
     setLoadingAi(null);
@@ -61,7 +66,7 @@ export const Foundations: React.FC = () => {
           />
         </div>
         
-        {/* Category Filters - Refactored to wrap */}
+        {/* Category Filters */}
         <div>
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Filter by Category</p>
           <div className="flex flex-wrap gap-2">
