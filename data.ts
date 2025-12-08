@@ -1238,7 +1238,7 @@ export const TOPICS: Topic[] = [
       <br/>- If it crosses 28 mmol/L at 120 mins, then <strong>120 minutes</strong> is the earliest time to start exercise to ensure the ergogenic effect.</p>
 
       <div class="mt-4">
-         <img src="https://i.imgur.com/example-placeholder.png" alt="Graph of Blood Bicarbonate vs Time" class="w-full max-w-md mx-auto border rounded shadow-sm opacity-50" />
+         <img src="public/images/bicarbonate_graph.png" alt="Graph of Blood Bicarbonate vs Time" class="w-full max-w-md mx-auto border rounded shadow-sm opacity-50" />
          <p class="text-xs text-center text-gray-500 mt-1">(Note: In the real app, insert your graph image here)</p>
       </div>
     `
@@ -1960,14 +1960,4 @@ export const QUESTIONS: Question[] = [
     explanation: 'Step 1 – Mass loss:\nMass loss = 70 – 69 = 1 kg.\n\nStep 2 – Convert fluid intake to litres:\n300 ml = 0.3 L.\n\nStep 3 – Total Sweat Loss:\nTotal Sweat Loss = 1.0 L (from mass loss) + 0.3 L (fluid consumed) = 1.3 L.\n\nStep 4 – Sweat Rate:\nExercise duration = 30 minutes = 0.5 hours.\nSweat Rate = 1.3 L ÷ 0.5 h = 2.6 L/hour (one decimal place).\n\nStep 5 – % Body Mass Change:\n% change = (Mass loss ÷ Starting mass) × 100 = (1 ÷ 70) × 100 = 1.428..., which rounds to 1.4% body mass loss (one decimal place).',
     sourceRef: 'Data Analysis / Fluid Balance'
   },
-  {
-    id: 'q_calc_4',
-    topicId: 'data-analysis',
-    type: QuestionType.SCENARIO,
-    difficulty: 'Level 6',
-    text: 'Scenario: An individual has partaken in three separate trials involving sodium citrate ingestion. A figure (not shown, visualize based on data) illustrates blood bicarbonate levels.\n\nData Points for 0.5 g/kg dose:\n- 0 min (Baseline): 22 mmol/L\n- 100 min: 27 mmol/L\n- 120 min: 29 mmol/L\n- 150 min: 30 mmol/L (Peak)\n\nThreshold Theory: An increase of ≥6 mmol/L above baseline is required for an ergogenic effect.\n\nTasks:\na) Determine the optimal dose and "time to peak" (based on the data above).\nb) Identify the earliest time point to commence exercise to maximize the likelihood of an ergogenic effect. Justify.',
-    correctAnswer: 'a) Optimal Dose: 0.5 g/kg; Time to Peak: 150 min. b) Earliest start time: 120 min.',
-    explanation: 'a) 0.5 g/kg is the optimal dose as it causes the largest increase. It peaks at 150 mins (30 mmol/L).\n\nb) Baseline is 22. Threshold is 22 + 6 = 28 mmol/L.\nAt 100 min, level is 27 (below threshold).\nAt 120 min, level is 29 (above threshold).\nTherefore, 120 minutes is the earliest point where the individual has surpassed the threshold.',
-    sourceRef: 'Data Analysis / Bicarbonate Graph'
-  }
-];
+ ];
