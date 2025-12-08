@@ -1125,191 +1125,124 @@ export const TOPICS: Topic[] = [
     {
     id: 'data-analysis',
     title: 'Focus on Data Analysis & Interpretation',
-    description: 'Learn to calculate RER, substrate oxidation rates, daily energy requirements (Cunningham), macronutrient targets, and fluid balance.',
+    description: 'Learn to calculate RER, substrate oxidation rates, daily energy requirements, fluid balance, and blood bicarbonate changes.',
     learningObjectives: [
       'Calculate RER and carbohydrate and fat oxidation rates (g/min and g/hour) using provided formulas.',
-      'Estimate daily energy requirements using the Cunningham equation and derive carbohydrate, protein, and fat quantities from g/kg targets.',
-      'Determine sweat rates (L/hour) and percentage body mass change from pre- and post-exercise body mass and recorded fluid intake.'
+      'Estimate daily energy requirements using the Cunningham equation and derive macronutrient quantities.',
+      'Determine sweat rates (L/hour) and percentage body mass change.',
+      'Interpret blood bicarbonate graphs to identify optimal dosing, time to peak, and the onset of the ergogenic window.'
     ],
     keyPoints: [
-      'RER = VCO2 / VO2 (≈0.70 = predominantly fat, ≈1.00 = predominantly carbohydrate).',
-      'Carbohydrate and fat oxidation can be calculated from VO2 and VCO2 using standard stoichiometric equations.',
-      'Cunningham equation: RMR (kcal/day) = 500 + 22 × Lean Body Mass (kg); TDEE = RMR × Activity Factor.',
-      'Macronutrient grams can be derived from g/kg targets, then checked against total kcal (4 kcal/g for carbohydrate and protein, 9 kcal/g for fat).',
-      'Sweat Rate (L/hour) = Total Sweat Loss (L) / Exercise Duration (hours); % Body Mass change = (Mass Loss / Starting Mass) × 100.'
+      'RER = VCO2 / VO2 (0.7 = 100% fat, 1.0 = 100% carbs).',
+      'Cunningham: RMR = 500 + 22 × LBM; TDEE = RMR × Activity Factor.',
+      'Sweat Rate = (Pre - Post + Drink) / Time.',
+      'Bicarbonate Threshold: An increase of ≥6 mmol/L from baseline indicates the ergogenic window.',
+      'Optimal Bicarbonate Dose: typically 0.3 - 0.5 g/kg to achieve the required +6 mmol/L rise.'
     ],
     quickSummary: [
-      '<strong>1. Substrate Use (Indirect Calorimetry):</strong> From VO2 and VCO2 you can calculate RER, then carbohydrate and fat oxidation in g/min and convert to g/hour. You will be given the equations in the exam.',
-      '<strong>2. Daily Energy Needs:</strong> Use the Cunningham equation with Lean Body Mass (LBM) to estimate Resting Metabolic Rate (RMR), then multiply by an Activity Factor to get Total Daily Energy Expenditure (TDEE).',
-      '<strong>3. Macronutrient Planning:</strong> Convert g/kg targets for carbohydrate and protein into grams, calculate their kcal contribution (4 kcal/g), subtract from TDEE, and use the remaining kcal to determine grams of fat (9 kcal/g).',
-      '<strong>4. Fluid Balance:</strong> Use pre- and post-exercise body mass plus recorded fluid intake to calculate total sweat loss, sweat rate in L/hour, and percentage body mass change.'
+      '<strong>1. Substrate Use:</strong> Calculate RER and oxidation rates from gas exchange data.',
+      '<strong>2. Energy Needs:</strong> Use Cunningham (based on LBM) for athletes.',
+      '<strong>3. Fluid Balance:</strong> Calculate sweat loss and % dehydration.',
+      '<strong>4. Bicarbonate Analysis:</strong> Identify "Time to Peak" and "Time to Threshold" (≥6 mmol/L increase) from blood graphs to time ingestion correctly.'
     ],
     fullNotes: `
       <h3>1. Indirect Calorimetry, RER & Substrate Oxidation</h3>
-      <p>Indirect calorimetry measures oxygen consumption (VO<sub>2</sub>) and carbon dioxide production (VCO<sub>2</sub>), usually in L/min. From these values you can calculate the Respiratory Exchange Ratio (RER) and the rate of carbohydrate and fat oxidation.</p>
-
+      <p>Indirect calorimetry measures oxygen consumption (VO<sub>2</sub>) and carbon dioxide production (VCO<sub>2</sub>). From these, we calculate RER and fuel usage.</p>
       <div class="bg-blue-50 p-4 rounded border border-blue-200 mb-4">
         <strong>Key formulas (you will be given these):</strong><br/>
         RER = VCO<sub>2</sub> / VO<sub>2</sub><br/>
         Carbohydrate oxidation (g/min) = 4.210 × VCO<sub>2</sub> – 2.962 × VO<sub>2</sub><br/>
         Fat oxidation (g/min) = 1.695 × VO<sub>2</sub> – 1.701 × VCO<sub>2</sub>
       </div>
-
-      <h4>Worked example (matches the exam-style question)</h4>
-      <p>Given: VCO<sub>2</sub> = 1.5 L/min, VO<sub>2</sub> = 1.8 L/min.</p>
-      <ol>
-        <li><strong>Step 1 – RER:</strong><br/>
-          RER = 1.5 / 1.8 = 0.833... ≈ <strong>0.83</strong> (to two decimal places).
-        </li>
-        <li><strong>Step 2 – Carbohydrate oxidation (g/min):</strong><br/>
-          Carbohydrate oxidation = (4.210 × 1.5) – (2.962 × 1.8)<br/>
-          = 6.315 – 5.3316 ≈ 0.98 g/min.
-        </li>
-        <li><strong>Step 3 – Fat oxidation (g/min):</strong><br/>
-          Fat oxidation = (1.695 × 1.8) – (1.701 × 1.5)<br/>
-          = 3.051 – 2.5515 ≈ 0.50 g/min.
-        </li>
-        <li><strong>Step 4 – Convert to g/hour:</strong><br/>
-          Multiply by 60 (minutes per hour).<br/>
-          Carbohydrate: 0.98 × 60 ≈ <strong>59.0 g/hour</strong> (one decimal place).<br/>
-          Fat: 0.50 × 60 ≈ <strong>30.0 g/hour</strong> (one decimal place).
-        </li>
-      </ol>
-
-      <p><em>Exam tip:</em> Check your units. If values are given in mL/min, convert to L/min by dividing by 1000 before using the formulas.</p>
-
-      <h4>Practice question</h4>
-      <p>An athlete has VO<sub>2</sub> = 2.0 L/min and VCO<sub>2</sub> = 1.6 L/min. Using the same formulas:</p>
+      <h4>Worked example:</h4>
+      <p>VCO<sub>2</sub> = 1.5 L/min, VO<sub>2</sub> = 1.8 L/min.</p>
       <ul>
-        <li>Calculate RER to two decimal places.</li>
-        <li>Calculate carbohydrate and fat oxidation in g/min, then convert each to g/hour (one decimal place).</li>
+        <li><strong>RER:</strong> 1.5 / 1.8 = 0.83</li>
+        <li><strong>Carb Ox:</strong> (4.210 × 1.5) - (2.962 × 1.8) ≈ 0.98 g/min (× 60 = 59 g/hr)</li>
+        <li><strong>Fat Ox:</strong> (1.695 × 1.8) - (1.701 × 1.5) ≈ 0.50 g/min (× 60 = 30 g/hr)</li>
       </ul>
-      <p><strong>Check your answers:</strong> RER ≈ 0.80, CHO ≈ 41–42 g/hour, fat ≈ 37–38 g/hour (depending on rounding).</p>
 
       <hr class="my-6"/>
 
       <h3>2. Energy Expenditure (Cunningham) & Macronutrient Targets</h3>
-      <p>The Cunningham equation is preferred for athletes because it uses Lean Body Mass (LBM), which reflects metabolically active tissue. You then scale RMR by an Activity Factor and translate macronutrient prescriptions (g/kg) into grams and kcal.</p>
+      <p>The Cunningham equation uses Lean Body Mass (LBM) to estimate Resting Metabolic Rate (RMR).</p>
 
       <div class="bg-green-50 p-4 rounded border border-green-200 mb-4">
-        <strong>Key formulas (you will be given these):</strong><br/>
-        Lean Body Mass (kg) = Body Mass – Fat Mass<br/>
-        Fat Mass (kg) = Body Mass × Body Fat % (as a decimal)<br/><br/>
-        Resting Metabolic Rate (RMR, kcal/day) = 500 + 22 × LBM (kg)<br/>
-        Total Daily Energy Expenditure (TDEE, kcal/day) = RMR × Activity Factor<br/><br/>
-        Carbohydrate grams/day = Body Mass (kg) × CHO requirement (g/kg)<br/>
-        Protein grams/day = Body Mass (kg) × Protein requirement (g/kg)<br/><br/>
-        Energy from carbohydrate = CHO grams × 4 kcal/g<br/>
-        Energy from protein = Protein grams × 4 kcal/g<br/>
-        Energy from fat = Remaining kcal / 9 kcal/g
+        <strong>Formula provided in the exam:</strong><br/>
+        Resting Metabolic Rate (RMR, kcal/day) = 500 + 22 × LBM (kg)
       </div>
 
-      <h4>Worked example (matches the exam-style question)</h4>
-      <p>Given:</p>
+      <div class="bg-gray-50 p-4 rounded border border-gray-200 mb-4">
+        <strong>Calculations you need to be aware of (memorize these):</strong><br/>
+        Fat Mass (kg) = Body Mass × Body Fat %<br/>
+        Lean Body Mass (kg) = Body Mass – Fat Mass<br/><br/>
+        TDEE = RMR × Activity Factor<br/><br/>
+        Macronutrient grams = Body Mass × g/kg target<br/>
+        Kcal from macro = grams × 4 (CHO/Pro) or 9 (Fat)
+      </div>
+
+      <h4>Worked example:</h4>
+      <p>60kg athlete, 15% body fat, Activity Factor 1.5.</p>
       <ul>
-        <li>Body Mass = 60 kg</li>
-        <li>Body Fat % = 15%</li>
-        <li>Activity Factor = 1.5</li>
-        <li>Protein requirement = 1.5 g/kg/day</li>
-        <li>Carbohydrate requirement = 6.0 g/kg/day</li>
+        <li><strong>LBM:</strong> 60 - (60 × 0.15) = 51 kg</li>
+        <li><strong>RMR:</strong> 500 + (22 × 51) = 1622 kcal</li>
+        <li><strong>TDEE:</strong> 1622 × 1.5 = 2433 kcal</li>
       </ul>
-
-      <ol>
-        <li><strong>Step 1 – Lean Body Mass (LBM):</strong><br/>
-          Fat Mass = 60 × 0.15 = 9 kg<br/>
-          LBM = 60 – 9 = <strong>51 kg</strong>.
-        </li>
-        <li><strong>Step 2 – RMR (Cunningham):</strong><br/>
-          RMR = 500 + 22 × 51 = 500 + 1122 = <strong>1622 kcal/day</strong>.
-        </li>
-        <li><strong>Step 3 – TDEE:</strong><br/>
-          TDEE = 1622 × 1.5 = <strong>2433 kcal/day</strong> (round to the nearest whole number).
-        </li>
-        <li><strong>Step 4 – Carbohydrate grams:</strong><br/>
-          CHO grams/day = 60 × 6.0 = <strong>360 g/day</strong>.
-        </li>
-        <li><strong>Step 5 – Protein grams:</strong><br/>
-          Protein grams/day = 60 × 1.5 = <strong>90 g/day</strong>.
-        </li>
-        <li><strong>Step 6 – Energy from CHO and protein:</strong><br/>
-          Energy from CHO = 360 × 4 = 1440 kcal<br/>
-          Energy from protein = 90 × 4 = 360 kcal<br/>
-          Total from CHO + protein = 1440 + 360 = <strong>1800 kcal</strong>.
-        </li>
-        <li><strong>Step 7 – Energy and grams of fat:</strong><br/>
-          Remaining kcal for fat = TDEE – 1800 = 2433 – 1800 = 633 kcal<br/>
-          Fat grams/day = 633 ÷ 9 ≈ <strong>70 g/day</strong> (nearest whole number).
-        </li>
-      </ol>
-
-      <p><em>Exam tip:</em> Always state units and round as instructed (e.g. to a whole number for kcal and grams in this question).</p>
-
-      <h4>Practice question</h4>
-      <p>An athlete has the following characteristics:</p>
-      <ul>
-        <li>Body Mass = 75 kg, Body Fat = 20%, Activity Factor = 1.6</li>
-        <li>Protein requirement = 1.6 g/kg/day</li>
-        <li>Carbohydrate requirement = 5.0 g/kg/day</li>
-      </ul>
-      <p>Repeat the steps above to calculate:</p>
-      <ol>
-        <li>LBM, RMR, and TDEE.</li>
-        <li>Daily grams of carbohydrate and protein.</li>
-        <li>Daily grams of fat.</li>
-      </ol>
-      <p><strong>Check (approximate) answers:</strong> LBM ≈ 60 kg, RMR ≈ 1819 kcal/day, TDEE ≈ 2910 kcal/day, CHO ≈ 375 g, protein ≈ 120 g, fat ≈ 80 g.</p>
 
       <hr class="my-6"/>
 
       <h3>3. Fluid Balance, Sweat Rate & Percentage Body Mass Change</h3>
-      <p>We can estimate sweat loss during exercise from changes in body mass combined with any fluid consumed. This is then expressed as a rate (L/hour) and as a percentage change in body mass.</p>
+      <p>Used to estimate fluid needs.</p>
 
       <div class="bg-amber-50 p-4 rounded border border-amber-200 mb-4">
-        <strong>Key formulas (you will be given these):</strong><br/>
-        Total Sweat Loss (L) = (Pre-exercise mass – Post-exercise mass) in kg + Fluid Intake (L)<br/>
-        Sweat Rate (L/hour) = Total Sweat Loss (L) ÷ Exercise Duration (hours)<br/><br/>
-        % Body Mass Change = (Mass Loss (kg) ÷ Pre-exercise Mass (kg)) × 100
+        <strong>Calculations you need to be aware of (memorize these):</strong><br/>
+        Total Sweat Loss (L) = (Pre mass – Post mass) + Fluid Intake<br/>
+        Sweat Rate (L/hour) = Total Sweat Loss / Duration (hours)<br/>
+        % Body Mass Change = (Mass Loss / Pre mass) × 100
       </div>
 
-      <h4>Worked example (matches the exam-style question)</h4>
-      <p>Given:</p>
+      <h4>Worked example:</h4>
+      <p>70kg start, 69kg finish, 300ml drink (0.3L), 30 mins (0.5h).</p>
       <ul>
-        <li>Pre-exercise mass = 70 kg</li>
-        <li>Post-exercise mass = 69 kg</li>
-        <li>Fluid intake during exercise = 300 ml (0.3 L)</li>
-        <li>Exercise duration = 30 minutes (0.5 hours)</li>
+        <li><strong>Mass Loss:</strong> 1 kg</li>
+        <li><strong>Total Sweat:</strong> 1.0 + 0.3 = 1.3 L</li>
+        <li><strong>Sweat Rate:</strong> 1.3 / 0.5 = 2.6 L/hr</li>
+        <li><strong>% Change:</strong> (1 / 70) × 100 = 1.4%</li>
       </ul>
 
-      <ol>
-        <li><strong>Step 1 – Mass loss:</strong><br/>
-          Mass loss = 70 – 69 = <strong>1 kg</strong>.
-        </li>
-        <li><strong>Step 2 – Total sweat loss (L):</strong><br/>
-          Convert fluid intake to litres: 300 ml = 0.3 L.<br/>
-          Total Sweat Loss = 1.0 L (from mass loss) + 0.3 L (intake) = <strong>1.3 L</strong>.
-        </li>
-        <li><strong>Step 3 – Sweat rate (L/hour):</strong><br/>
-          Duration = 30 min = 0.5 h.<br/>
-          Sweat Rate = 1.3 ÷ 0.5 = <strong>2.6 L/hour</strong> (one decimal place).
-        </li>
-        <li><strong>Step 4 – % Body Mass change:</strong><br/>
-          % change = (Mass loss ÷ Starting mass) × 100<br/>
-          = (1 ÷ 70) × 100 = 1.428... ≈ <strong>1.4%</strong> reduction in body mass (one decimal place).
-        </li>
-      </ol>
+      <hr class="my-6"/>
 
-      <p><em>Exam tip:</em> Always check that a loss in mass gives a positive % reduction (do not put a minus sign unless explicitly asked).</p>
+      <h3>4. Blood Bicarbonate Changes (Graph Analysis)</h3>
+      <p>In the exam, you may be presented with a graph plotting <strong>Blood Bicarbonate Concentration (mmol/L)</strong> against <strong>Time (minutes)</strong> for different doses of sodium citrate or bicarbonate.</p>
 
-      <h4>Practice question</h4>
-      <p>An athlete starts a 90-minute training session at 68 kg and finishes at 66.8 kg. They drink 500 ml of fluid during the session.</p>
-      <ul>
-        <li>Calculate total sweat loss (L).</li>
-        <li>Calculate sweat rate (L/hour) to one decimal place.</li>
-        <li>Calculate the percentage body mass change to one decimal place.</li>
-      </ul>
-      <p><strong>Check your answers (approximate):</strong> Total sweat ≈ 2.1 L, sweat rate ≈ 1.4 L/hour, % body mass change ≈ 1.8%.</p>
+      <div class="bg-purple-50 p-4 rounded border border-purple-200 mb-4">
+        <strong>Key Concepts for Analysis:</strong>
+        <ul class="list-disc ml-5 mt-2">
+            <li><strong>Baseline:</strong> The starting bicarbonate level at Time 0 (typically ~22-24 mmol/L).</li>
+            <li><strong>The Threshold (+6 mmol/L):</strong> Research suggests performance benefits are most likely when blood bicarbonate rises by at least <strong>6 mmol/L above baseline</strong>.</li>
+            <li><strong>Time to Peak:</strong> The time point where the concentration is highest.</li>
+            <li><strong>Optimal Dose:</strong> The dose that successfully elevates bicarbonate above the +6 mmol/L threshold (often >0.3 g/kg). Lower doses (e.g., 0.1 g/kg) often fail to reach this.</li>
+        </ul>
+      </div>
+
+      <h4>How to Analyze the Graph (Example Task):</h4>
+      <p><strong>Scenario:</strong> You see a graph with three lines (0.1, 0.3, and 0.5 g/kg). Baseline is 22 mmol/L.</p>
+      <p><strong>Task 1: Determine Optimal Dose & Time to Peak.</strong><br/>
+      Look for the curve that goes highest. If the 0.5 g/kg line peaks at 30 mmol/L at 150 mins, then:
+      <br/>- <em>Optimal Dose:</em> 0.5 g/kg (as it causes the greatest shift).
+      <br/>- <em>Time to Peak:</em> 150 mins.</p>
+
+      <p><strong>Task 2: Identify Start Time based on Threshold.</strong><br/>
+      Calculate the target: Baseline (22) + 6 = <strong>28 mmol/L</strong>.
+      <br/>Look at the 0.5 g/kg curve. Find the <em>first</em> time point where the line crosses 28 mmol/L.
+      <br/>- If it crosses 28 mmol/L at 120 mins, then <strong>120 minutes</strong> is the earliest time to start exercise to ensure the ergogenic effect.</p>
+
+      <div class="mt-4">
+         <img src="https://i.imgur.com/example-placeholder.png" alt="Graph of Blood Bicarbonate vs Time" class="w-full max-w-md mx-auto border rounded shadow-sm opacity-50" />
+         <p class="text-xs text-center text-gray-500 mt-1">(Note: In the real app, insert your graph image here)</p>
+      </div>
     `
-  },
+  }
 ];
 
 export const QUESTIONS: Question[] = [
@@ -2027,4 +1960,14 @@ export const QUESTIONS: Question[] = [
     explanation: 'Step 1 – Mass loss:\nMass loss = 70 – 69 = 1 kg.\n\nStep 2 – Convert fluid intake to litres:\n300 ml = 0.3 L.\n\nStep 3 – Total Sweat Loss:\nTotal Sweat Loss = 1.0 L (from mass loss) + 0.3 L (fluid consumed) = 1.3 L.\n\nStep 4 – Sweat Rate:\nExercise duration = 30 minutes = 0.5 hours.\nSweat Rate = 1.3 L ÷ 0.5 h = 2.6 L/hour (one decimal place).\n\nStep 5 – % Body Mass Change:\n% change = (Mass loss ÷ Starting mass) × 100 = (1 ÷ 70) × 100 = 1.428..., which rounds to 1.4% body mass loss (one decimal place).',
     sourceRef: 'Data Analysis / Fluid Balance'
   },
+  {
+    id: 'q_calc_4',
+    topicId: 'data-analysis',
+    type: QuestionType.SCENARIO,
+    difficulty: 'Level 6',
+    text: 'Scenario: An individual has partaken in three separate trials involving sodium citrate ingestion. A figure (not shown, visualize based on data) illustrates blood bicarbonate levels.\n\nData Points for 0.5 g/kg dose:\n- 0 min (Baseline): 22 mmol/L\n- 100 min: 27 mmol/L\n- 120 min: 29 mmol/L\n- 150 min: 30 mmol/L (Peak)\n\nThreshold Theory: An increase of ≥6 mmol/L above baseline is required for an ergogenic effect.\n\nTasks:\na) Determine the optimal dose and "time to peak" (based on the data above).\nb) Identify the earliest time point to commence exercise to maximize the likelihood of an ergogenic effect. Justify.',
+    correctAnswer: 'a) Optimal Dose: 0.5 g/kg; Time to Peak: 150 min. b) Earliest start time: 120 min.',
+    explanation: 'a) 0.5 g/kg is the optimal dose as it causes the largest increase. It peaks at 150 mins (30 mmol/L).\n\nb) Baseline is 22. Threshold is 22 + 6 = 28 mmol/L.\nAt 100 min, level is 27 (below threshold).\nAt 120 min, level is 29 (above threshold).\nTherefore, 120 minutes is the earliest point where the individual has surpassed the threshold.',
+    sourceRef: 'Data Analysis / Bicarbonate Graph'
+  }
 ];

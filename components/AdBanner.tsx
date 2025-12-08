@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 
 export const AdBanner: React.FC = () => {
@@ -8,7 +9,9 @@ export const AdBanner: React.FC = () => {
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
       (window as any).adsbygoogle.push({});
     } catch (e) {
-      console.error("AdSense error (normal if running locally or blocked by adblock):", e);
+      // AdSense errors are common in dev environments or with adblockers
+      // We suppress the console error to keep the log clean unless debugging
+      // console.error("AdSense info:", e);
     }
   }, []);
 
@@ -24,12 +27,12 @@ export const AdBanner: React.FC = () => {
         
         {/* 
            AdSense Unit 
-           Using a standard block styling with a min-height to prevent "No slot size" errors 
-           when parent containers collapse before JS loads.
+           - Wrapper div provides min-height to prevent layout shift (CLS)
+           - <ins> tag style is just 'block' to let data-ad-format="auto" calculate dimensions correctly
         */}
         <div style={{ minHeight: '100px', width: '100%' }}>
           <ins className="adsbygoogle"
-               style={{ display: 'block', width: '100%', height: '100px' }}
+               style={{ display: 'block' }}
                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" 
                data-ad-slot="1234567890" 
                data-ad-format="auto"
