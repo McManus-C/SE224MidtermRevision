@@ -1238,8 +1238,7 @@ export const TOPICS: Topic[] = [
       <br/>- If it crosses 28 mmol/L at 120 mins, then <strong>120 minutes</strong> is the earliest time to start exercise to ensure the ergogenic effect.</p>
 
       <div class="mt-4">
-         <img src="public/images/bicarbonate_graph.png" alt="Graph of Blood Bicarbonate vs Time" class="w-full max-w-md mx-auto border rounded shadow-sm opacity-50" />
-         <p class="text-xs text-center text-gray-500 mt-1">(Note: In the real app, insert your graph image here)</p>
+         <img src="/images/bicarbonate_graph.png" alt="Graph of Blood Bicarbonate vs Time" class="w-full max-w-lg mx-auto border rounded shadow-sm my-4" />
       </div>
     `
   }
